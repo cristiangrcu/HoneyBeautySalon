@@ -81,6 +81,10 @@
       "hair": {
         "title": "Hair styling",
         "description": "Cuts, styling, colouring and treatments. Your hair, in the hands of the best stylists."
+      },
+      "barber": {
+        "title": "Men's barbering",
+        "description": "Classic and modern cuts, fades, beard shaping and shaving rituals — men deserve a moment of style too."
       }
     }
   },

@@ -81,6 +81,10 @@
       "hair": {
         "title": "Coafură & Păr",
         "description": "Tunsori, coafuri, vopsit și tratamente. Părul tău, în mâinile celor mai bune stiliste."
+      },
+      "barber": {
+        "title": "Tunsoare bărbați",
+        "description": "Tunsori clasice și moderne, fade, conturare barbă și ritualuri de bărbierit — bărbații merită și ei o pauză de stil."
       }
     }
   },

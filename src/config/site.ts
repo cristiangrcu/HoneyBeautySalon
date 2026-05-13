@@ -1,6 +1,6 @@
 /**
  * Central content config.
- * Drop real assets in /public/photos and update the *_LOCAL paths below.
+ * All photos live in /public/photos/ — see the photos object below.
  */
 
 export const siteConfig = {
@@ -43,22 +43,15 @@ export const siteConfig = {
   }
 };
 
-/**
- * Local salon photos. Drop your files into /public/photos/ with these names.
- * If a file is missing, the image will simply 404 — replace with Unsplash
- * fallbacks below or update the path.
- */
 export const photos = {
-  hero: '/photos/salon-1.jpg',
-  about: '/photos/salon-2.jpg',
-  aboutSecondary: '/photos/salon-3.jpg',
-  // Unsplash fallbacks used until real photos are dropped in /public/photos
+  hero: '/photos/salon-hero.jpg',
+  about: '/photos/salon-interior-1.jpg',
+  aboutSecondary: '/photos/salon-interior-2.jpg',
+  // Kept for legacy SmartImage fallback compatibility — never used now.
   fallback: {
-    hero: 'https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1200&q=80',
-    about:
-      'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=80',
-    aboutSecondary:
-      'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80'
+    hero: '/photos/salon-hero.jpg',
+    about: '/photos/salon-interior-1.jpg',
+    aboutSecondary: '/photos/salon-interior-2.jpg'
   }
 };
 
@@ -67,8 +60,9 @@ export type ServiceKey =
   | 'pedicure'
   | 'lashes'
   | 'brows'
+  | 'hair'
   | 'makeup'
-  | 'hair';
+  | 'barber';
 
 export interface ServiceItem {
   key: ServiceKey;
@@ -84,16 +78,14 @@ export const services: ServiceItem[] = [
     priceFrom: 350,
     currency: 'MDL',
     duration: '60–90 min',
-    image:
-      'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1200&q=80'
+    image: '/photos/service-manicure.jpg'
   },
   {
     key: 'pedicure',
     priceFrom: 450,
     currency: 'MDL',
     duration: '75–90 min',
-    image:
-      'https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=1200&q=80'
+    image: '/photos/service-pedicure.jpg'
   },
   {
     key: 'lashes',
@@ -112,36 +104,40 @@ export const services: ServiceItem[] = [
       'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=80'
   },
   {
-    key: 'makeup',
-    priceFrom: 600,
-    currency: 'MDL',
-    duration: '60 min',
-    image:
-      'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=80'
-  },
-  {
     key: 'hair',
     priceFrom: 400,
     currency: 'MDL',
     duration: '60–120 min',
-    image:
-      'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80'
+    image: '/photos/service-hair-balayage.jpg'
+  },
+  {
+    key: 'makeup',
+    priceFrom: 600,
+    currency: 'MDL',
+    duration: '60 min',
+    image: '/photos/service-makeup.jpg'
+  },
+  {
+    key: 'barber',
+    priceFrom: 250,
+    currency: 'MDL',
+    duration: '45–60 min',
+    image: '/photos/service-barber-honey.jpg'
   }
 ];
 
-/** Gallery — warm beige/wood salon-style imagery to match the Honey aesthetic. */
+/** Gallery — curated mix of real salon, services and renders. */
 export const galleryImages = [
-  'https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1583241800698-9c2e30a4f3f8?auto=format&fit=crop&w=900&q=80'
+  '/photos/salon-interior-3.jpg',
+  '/photos/service-hair.jpg',
+  '/photos/service-makeup-2.jpg',
+  '/photos/render-logo-lounge.jpg',
+  '/photos/service-barber-beard.jpg',
+  '/photos/service-makeup-3.jpg',
+  '/photos/render-hair-stations.jpg',
+  '/photos/salon-brochure.jpg'
 ];
 
-/** Google reviews — curated highlights. Replace with real client reviews. */
 export interface GoogleReview {
   key: string;
   rating: number;

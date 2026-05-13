@@ -34,8 +34,8 @@ const config: Config = {
         sans: ['var(--font-sans)', 'sans-serif']
       },
       boxShadow: {
-        soft: '0 12px 40px -16px rgba(165, 115, 36, 0.25)',
-        gold: '0 10px 30px -10px rgba(197, 142, 48, 0.45)'
+        soft: '0 12px 40px -18px rgba(165, 115, 36, 0.18)',
+        gold: '0 14px 36px -16px rgba(218, 168, 79, 0.38)'
       },
       backgroundImage: {
         'honey-radial':

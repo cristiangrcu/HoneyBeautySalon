@@ -2,21 +2,22 @@ import type { Metadata } from 'next';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Cormorant_Garamond, Inter } from 'next/font/google';
+import { Fraunces, Plus_Jakarta_Sans } from 'next/font/google';
 import { routing } from '@/i18n/routing';
 import { siteConfig } from '@/config/site';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { FloatingActions } from '@/components/FloatingActions';
 
-const display = Cormorant_Garamond({
+const display = Fraunces({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['300', '400', '500', '600'],
+  style: ['normal', 'italic'],
   variable: '--font-display',
   display: 'swap'
 });
 
-const sans = Inter({
+const sans = Plus_Jakarta_Sans({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600'],
   variable: '--font-sans',

@@ -18,8 +18,8 @@ const config: Config = {
           900: '#3B2A12'
         },
         cream: {
-          50: '#FDFBF6',
-          100: '#FAF5E9',
+          50: '#FFFFFF',
+          100: '#FBF8F1',
           200: '#F4ECD4',
           300: '#EAE0BF',
           400: '#D9CBA3'
@@ -39,7 +39,7 @@ const config: Config = {
       },
       backgroundImage: {
         'honey-radial':
-          'radial-gradient(circle at 20% 20%, rgba(218,168,79,0.18), transparent 60%), radial-gradient(circle at 80% 0%, rgba(218,168,79,0.12), transparent 55%)',
+          'radial-gradient(circle at 20% 20%, rgba(218,168,79,0.08), transparent 60%), radial-gradient(circle at 80% 0%, rgba(218,168,79,0.05), transparent 55%)',
         'honey-gradient': 'linear-gradient(135deg, #DAA84F 0%, #C58E30 50%, #A47324 100%)'
       },
       animation: {

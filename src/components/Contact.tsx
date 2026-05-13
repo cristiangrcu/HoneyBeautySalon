@@ -48,7 +48,7 @@ export function Contact() {
                 </li>
                 <li className="flex justify-between gap-6">
                   <span>{t('hoursSunday')}</span>
-                  <span className="font-medium text-honey-700">{siteConfig.hours.sunday}</span>
+                  <span className="font-medium text-ink">{siteConfig.hours.sunday}</span>
                 </li>
               </ul>
             </InfoRow>

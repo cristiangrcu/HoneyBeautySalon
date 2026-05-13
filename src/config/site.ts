@@ -26,9 +26,9 @@ export const siteConfig = {
       'https://www.google.com/maps/search/?api=1&query=Bd.+Mircea+cel+B%C4%83tr%C3%A2n+41B%2C+Chi%C8%99in%C4%83u'
   },
   hours: {
-    weekdays: '09:00 — 19:00',
-    saturday: '09:00 — 19:00',
-    sunday: 'Închis'
+    weekdays: '09:00 — 20:00',
+    saturday: '09:00 — 20:00',
+    sunday: '10:00 — 19:00'
   },
   reviews: {
     rating: 5.0,

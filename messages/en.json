@@ -90,9 +90,13 @@
     "subtitle": "A selection of our work — every detail matters."
   },
   "testimonials": {
-    "eyebrow": "Reviews",
+    "eyebrow": "Google Reviews",
     "title": "What our clients say",
-    "subtitle": "We're lucky to receive kind words every day. Here are a few.",
+    "subtitle": "We're proud of every kind word. Here's a selection from our Google reviews.",
+    "ratingLabel": "Google rating",
+    "reviewsCount": "{count}+ reviews",
+    "viewAll": "See all on Google",
+    "writeReview": "Leave a review",
     "items": {
       "maria": {
         "name": "Maria T.",
@@ -119,7 +123,7 @@
     "phoneLabel": "Phone",
     "hoursLabel": "Hours",
     "emailLabel": "Email",
-    "hoursWeekdays": "Mon — Fri",
+    "hoursWeekdays": "Mon — Sat",
     "hoursSaturday": "Saturday",
     "hoursSunday": "Sunday",
     "directions": "Open in Google Maps",

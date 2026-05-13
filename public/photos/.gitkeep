@@ -1,0 +1,10 @@
+# Drop salon photos here
+
+Place your real salon photos at the following paths:
+- /public/photos/salon-1.jpg  → used in the Hero section
+- /public/photos/salon-2.jpg  → used in the About section
+- /public/photos/salon-3.jpg  → optional secondary About image
+
+Recommended size: 1600×2000 (4:5) JPG/WebP, < 400 KB each.
+Until these files exist, the site uses Unsplash fallbacks defined in
+src/config/site.ts (photos.fallback.*).

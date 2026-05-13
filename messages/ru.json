@@ -90,9 +90,13 @@
     "subtitle": "Подборка работ наших мастеров — каждая деталь важна."
   },
   "testimonials": {
-    "eyebrow": "Отзывы",
+    "eyebrow": "Отзывы Google",
     "title": "Что говорят наши клиентки",
-    "subtitle": "Каждый день получаем тёплые слова. Вот несколько из них.",
+    "subtitle": "Мы гордимся каждым добрым словом. Вот выбранные отзывы с Google.",
+    "ratingLabel": "Рейтинг на Google",
+    "reviewsCount": "{count}+ отзывов",
+    "viewAll": "Все отзывы на Google",
+    "writeReview": "Оставить отзыв",
     "items": {
       "maria": {
         "name": "Мария Т.",
@@ -119,7 +123,7 @@
     "phoneLabel": "Телефон",
     "hoursLabel": "Часы работы",
     "emailLabel": "Email",
-    "hoursWeekdays": "Пн — Пт",
+    "hoursWeekdays": "Пн — Сб",
     "hoursSaturday": "Суббота",
     "hoursSunday": "Воскресенье",
     "directions": "Открыть в Google Maps",

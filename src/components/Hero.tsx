@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { siteConfig } from '@/config/site';
+import { siteConfig, photos } from '@/config/site';
+import { SmartImage } from './SmartImage';
 
 export function Hero() {
   const t = useTranslations('hero');
@@ -48,8 +48,9 @@ export function Hero() {
 
         <div className="relative animate-fade-in">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2.5rem] shadow-soft ring-1 ring-honey-200/50">
-            <Image
-              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80"
+            <SmartImage
+              src={photos.hero}
+              fallback={photos.fallback.hero}
               alt="Honey Beauty Salon"
               fill
               priority

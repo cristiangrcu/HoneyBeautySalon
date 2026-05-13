@@ -47,10 +47,6 @@ export function Contact() {
                   <span className="font-medium text-ink">{siteConfig.hours.weekdays}</span>
                 </li>
                 <li className="flex justify-between gap-6">
-                  <span>{t('hoursSaturday')}</span>
-                  <span className="font-medium text-ink">{siteConfig.hours.saturday}</span>
-                </li>
-                <li className="flex justify-between gap-6">
                   <span>{t('hoursSunday')}</span>
                   <span className="font-medium text-honey-700">{siteConfig.hours.sunday}</span>
                 </li>

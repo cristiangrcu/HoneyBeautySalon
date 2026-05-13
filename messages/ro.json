@@ -90,9 +90,13 @@
     "subtitle": "O selecție din munca noastră — fiecare detaliu contează."
   },
   "testimonials": {
-    "eyebrow": "Recenzii",
+    "eyebrow": "Recenzii Google",
     "title": "Ce spun clientele noastre",
-    "subtitle": "Avem norocul să primim zilnic cuvinte calde. Iată câteva.",
+    "subtitle": "Suntem mândri de fiecare cuvânt primit. Iată o selecție din recenziile noastre Google.",
+    "ratingLabel": "Evaluare pe Google",
+    "reviewsCount": "{count}+ recenzii",
+    "viewAll": "Vezi toate pe Google",
+    "writeReview": "Lasă o recenzie",
     "items": {
       "maria": {
         "name": "Maria T.",
@@ -119,7 +123,7 @@
     "phoneLabel": "Telefon",
     "hoursLabel": "Program",
     "emailLabel": "Email",
-    "hoursWeekdays": "Luni — Vineri",
+    "hoursWeekdays": "Luni — Sâmbătă",
     "hoursSaturday": "Sâmbătă",
     "hoursSunday": "Duminică",
     "directions": "Deschide în Google Maps",

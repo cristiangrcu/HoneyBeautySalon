@@ -1,6 +1,6 @@
 /**
- * Central content config. Replace these values with real ones.
- * Anything textual that differs per language lives in `messages/*.json`.
+ * Central content config.
+ * Drop real assets in /public/photos and update the *_LOCAL paths below.
  */
 
 export const siteConfig = {
@@ -8,31 +8,57 @@ export const siteConfig = {
   shortName: 'Honey',
   domain: 'honeys-beauty.shop',
   url: 'https://honeys-beauty.shop',
-  email: 'contact@honeys-beauty.shop',
-  phone: '+373 60 000 000',
-  phoneDisplay: '+373 60 000 000',
-  whatsapp: '37360000000',
-  instagram: 'https://www.instagram.com/honeys.beauty/',
-  tiktok: 'https://www.tiktok.com/@honeys.beauty',
-  facebook: 'https://www.facebook.com/honeys.beauty',
+  email: 'salon@honeys-beauty.shop',
+  phone: '+373 69 644 666',
+  phoneDisplay: '+373 69 644 666',
+  whatsapp: '37369644666',
+  instagram: 'https://www.instagram.com/honeybeautysalon.md/',
+  tiktok: 'https://www.tiktok.com/@honeybeautysalon.md',
+  facebook:
+    'https://www.facebook.com/people/HONEY-Beauty-Salon/61583374584181/',
   address: {
-    street: 'Str. Ștefan cel Mare 100',
+    street: 'Bd. Mircea cel Bătrân 41B',
     city: 'Chișinău',
     country: 'Moldova',
     googleMapsEmbed:
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.0866!2d28.8333!3d47.0246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDAxJzI4LjYiTiAyOMKwNTAnMDAuMCJF!5e0!3m2!1sen!2s!4v1700000000000',
-    googleMapsLink: 'https://maps.google.com/?q=Honey+Beauty+Salon+Chisinau'
+      'https://maps.google.com/maps?q=Bd.+Mircea+cel+B%C4%83tr%C3%A2n+41B%2C+Chi%C8%99in%C4%83u&t=&z=16&ie=UTF8&iwloc=&output=embed',
+    googleMapsLink:
+      'https://www.google.com/maps/search/?api=1&query=Bd.+Mircea+cel+B%C4%83tr%C3%A2n+41B%2C+Chi%C8%99in%C4%83u'
   },
   hours: {
-    weekdays: '09:00 — 20:00',
-    saturday: '10:00 — 18:00',
+    weekdays: '09:00 — 19:00',
+    saturday: '09:00 — 19:00',
     sunday: 'Închis'
   },
-  // Altegio booking. Replace with your real Altegio company URL.
-  // Get yours from https://altegio.com or your dashboard.
+  reviews: {
+    rating: 5.0,
+    count: 120,
+    googleProfile: 'https://share.google/zFuNb1CJMGZZGyGEy',
+    writeReview: 'https://share.google/zFuNb1CJMGZZGyGEy'
+  },
+  // Altegio booking — replace with your real Altegio company URL.
   altegio: {
     bookingUrl: 'https://n123456.alteg.io/company/123456/personal/menu?o=',
     companyId: '123456'
+  }
+};
+
+/**
+ * Local salon photos. Drop your files into /public/photos/ with these names.
+ * If a file is missing, the image will simply 404 — replace with Unsplash
+ * fallbacks below or update the path.
+ */
+export const photos = {
+  hero: '/photos/salon-1.jpg',
+  about: '/photos/salon-2.jpg',
+  aboutSecondary: '/photos/salon-3.jpg',
+  // Unsplash fallbacks used until real photos are dropped in /public/photos
+  fallback: {
+    hero: 'https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=1200&q=80',
+    about:
+      'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=1200&q=80',
+    aboutSecondary:
+      'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=600&q=80'
   }
 };
 
@@ -52,7 +78,6 @@ export interface ServiceItem {
   duration: string;
 }
 
-/** Service catalog — text comes from translations, prices and images here. */
 export const services: ServiceItem[] = [
   {
     key: 'manicure',
@@ -104,31 +129,46 @@ export const services: ServiceItem[] = [
   }
 ];
 
+/** Gallery — warm beige/wood salon-style imagery to match the Honey aesthetic. */
 export const galleryImages = [
-  'https://images.unsplash.com/photo-1522335789203-aaa6dbf3805d?auto=format&fit=crop&w=900&q=80',
+  'https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?auto=format&fit=crop&w=900&q=80',
+  'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=80',
+  'https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=80',
   'https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1571290274554-6a2eaa771e5f?auto=format&fit=crop&w=900&q=80',
   'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=900&q=80',
   'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=80',
   'https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=900&q=80'
+  'https://images.unsplash.com/photo-1583241800698-9c2e30a4f3f8?auto=format&fit=crop&w=900&q=80'
 ];
 
-export const testimonials = [
+/** Google reviews — curated highlights. Replace with real client reviews. */
+export interface GoogleReview {
+  key: string;
+  rating: number;
+  image: string;
+  date: string;
+}
+
+export const googleReviews: GoogleReview[] = [
   {
     key: 'maria',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80'
+    image:
+      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
+    date: '2025-03-12'
   },
   {
     key: 'elena',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80'
+    image:
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
+    date: '2025-02-04'
   },
   {
     key: 'ana',
     rating: 5,
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80'
+    image:
+      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80',
+    date: '2025-01-21'
   }
 ];

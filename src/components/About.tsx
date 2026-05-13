@@ -1,5 +1,6 @@
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { photos } from '@/config/site';
+import { SmartImage } from './SmartImage';
 
 const HIGHLIGHTS = ['premium', 'hygiene', 'team', 'comfort'] as const;
 
@@ -11,8 +12,9 @@ export function About() {
       <div className="container-honey grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
         <div className="relative">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-soft ring-1 ring-honey-100">
-            <Image
-              src="https://images.unsplash.com/photo-1522335789203-aaa6dbf3805d?auto=format&fit=crop&w=1200&q=80"
+            <SmartImage
+              src={photos.about}
+              fallback={photos.fallback.about}
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -20,8 +22,9 @@ export function About() {
             />
           </div>
           <div className="absolute -bottom-8 -right-4 hidden aspect-square w-48 overflow-hidden rounded-3xl shadow-soft ring-4 ring-cream-50 md:block">
-            <Image
-              src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=600&q=80"
+            <SmartImage
+              src={photos.aboutSecondary}
+              fallback={photos.fallback.aboutSecondary}
               alt=""
               fill
               sizes="200px"

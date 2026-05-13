@@ -1,46 +1,44 @@
 import { Link } from '@/i18n/routing';
 
-export function Logo({ inverted = false }: { inverted?: boolean }) {
+/**
+ * Typographic logo matching the uploaded Honey Beauty Salon brand.
+ * If you'd rather use the image version, drop /public/logo.svg or
+ * /public/logo.png and replace the inner span with a <Image /> tag.
+ */
+export function Logo({
+  inverted = false,
+  size = 'sm'
+}: {
+  inverted?: boolean;
+  size?: 'sm' | 'lg';
+}) {
+  const titleSize =
+    size === 'lg'
+      ? 'text-4xl sm:text-5xl tracking-[0.32em]'
+      : 'text-2xl tracking-[0.28em]';
+  const subSize =
+    size === 'lg' ? 'text-[11px] tracking-[0.5em]' : 'text-[8px] tracking-[0.42em]';
+
   return (
-    <Link href="/" className="group flex items-center gap-2.5">
-      <span className="relative flex h-10 w-10 items-center justify-center rounded-full bg-honey-gradient text-white shadow-gold transition-transform duration-300 group-hover:scale-105">
-        <HoneyDrop className="h-5 w-5" />
+    <Link
+      href="/"
+      aria-label="Honey Beauty Salon"
+      className="group inline-flex flex-col items-start leading-none"
+    >
+      <span
+        className={`font-display font-light uppercase ${titleSize} transition-colors ${
+          inverted ? 'text-cream-50' : 'text-ink'
+        } group-hover:text-honey-700`}
+      >
+        Honey
       </span>
-      <span className="flex flex-col leading-none">
-        <span
-          className={`font-display text-xl font-semibold tracking-tight ${
-            inverted ? 'text-cream-50' : 'text-ink'
-          }`}
-        >
-          Honey
-        </span>
-        <span
-          className={`text-[10px] uppercase tracking-[0.32em] ${
-            inverted ? 'text-cream-200' : 'text-honey-700'
-          }`}
-        >
-          Beauty Salon
-        </span>
+      <span
+        className={`mt-1 font-sans font-light uppercase ${subSize} ${
+          inverted ? 'text-cream-200/90' : 'text-ink-soft'
+        }`}
+      >
+        Beauty Salon
       </span>
     </Link>
-  );
-}
-
-function HoneyDrop({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-      <path
-        d="M12 3c2.8 4.2 5.5 7.5 5.5 11a5.5 5.5 0 1 1-11 0c0-3.5 2.7-6.8 5.5-11Z"
-        fill="currentColor"
-        opacity=".95"
-      />
-      <path
-        d="M10.5 10c-1 1.4-2 3-2 4.5"
-        stroke="white"
-        strokeWidth="1.2"
-        strokeLinecap="round"
-        opacity=".7"
-      />
-    </svg>
   );
 }

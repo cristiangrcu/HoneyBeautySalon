@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "title": "Honey Beauty Salon — Frumusețea ta, atinsă de dulceața mierii",
+    "description": "Salon de înfrumusețare premium în Chișinău. Manichiură, pedichiură, gene, sprâncene, machiaj și păr. Rezervă online în câteva secunde.",
+    "ogAlt": "Honey Beauty Salon"
+  },
+  "nav": {
+    "home": "Acasă",
+    "about": "Despre noi",
+    "services": "Servicii",
+    "gallery": "Galerie",
+    "testimonials": "Recenzii",
+    "contact": "Contact",
+    "book": "Rezervă acum",
+    "menu": "Meniu",
+    "close": "Închide"
+  },
+  "language": {
+    "label": "Limbă",
+    "ro": "Română",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "hero": {
+    "eyebrow": "Salon de înfrumusețare premium",
+    "title": "Frumusețea ta, atinsă de dulceața <gold>mierii</gold>",
+    "subtitle": "Tratamente fine, mâini experte și o atmosferă în care te răsfeți. La Honey, fiecare detaliu este gândit pentru tine.",
+    "ctaPrimary": "Rezervă online",
+    "ctaSecondary": "Vezi serviciile",
+    "stats": {
+      "clients": "1500+ cliente fericite",
+      "rating": "4.9 ★ pe Google",
+      "experience": "5+ ani de experiență"
+    }
+  },
+  "about": {
+    "eyebrow": "Despre Honey",
+    "title": "Un salon creat cu grijă, pentru tine",
+    "p1": "La Honey Beauty Salon credem că frumusețea este un ritual — un moment doar al tău, în care te oprești, respiri și te simți specială. Echipa noastră îmbină tehnici clasice cu trenduri actuale, folosind produse premium și instrumente sterilizate la cele mai înalte standarde.",
+    "p2": "Indiferent dacă vii pentru o manichiură rapidă sau pentru un look complet pentru o ocazie specială, vei pleca acasă strălucitoare.",
+    "highlights": {
+      "premium": "Produse premium",
+      "premiumDesc": "Mărci profesionale recunoscute internațional.",
+      "hygiene": "Sterilizare la standard medical",
+      "hygieneDesc": "Instrumente sterilizate în autoclav pentru fiecare client.",
+      "team": "Echipă experimentată",
+      "teamDesc": "Specialiste certificate, cu experiență de ani de zile.",
+      "comfort": "Atmosferă caldă",
+      "comfortDesc": "Un spațiu intim, gândit pentru relaxarea ta totală."
+    }
+  },
+  "services": {
+    "eyebrow": "Serviciile noastre",
+    "title": "Tot ce ai nevoie ca să strălucești",
+    "subtitle": "De la mâini perfecte la priviri răpitoare — fiecare serviciu este realizat cu pasiune și precizie.",
+    "from": "de la",
+    "duration": "Durată",
+    "book": "Rezervă",
+    "viewAll": "Vezi toate serviciile",
+    "items": {
+      "manicure": {
+        "title": "Manichiură",
+        "description": "Manichiură clasică, japoneză sau cu gel premium. Forme perfecte, design personalizat și o ținută impecabilă."
+      },
+      "pedicure": {
+        "title": "Pedichiură",
+        "description": "Pedichiură SPA cu îngrijire completă, exfoliere și acoperire de lungă durată — pentru picioare perfect îngrijite."
+      },
+      "lashes": {
+        "title": "Extensii de gene",
+        "description": "Clasic, 2D, 3D sau efect mega-volum. Gene confortabile, naturale și rezistente, aplicate fir cu fir."
+      },
+      "brows": {
+        "title": "Design sprâncene",
+        "description": "Arhitectură sprâncene, vopsit cu henna sau vopsea, laminare — privirea ta, accentuată cu finețe."
+      },
+      "makeup": {
+        "title": "Machiaj",
+        "description": "Machiaj de zi, de seară sau pentru evenimente speciale. Tehnici moderne și produse de lungă durată."
+      },
+      "hair": {
+        "title": "Coafură & Păr",
+        "description": "Tunsori, coafuri, vopsit și tratamente. Părul tău, în mâinile celor mai bune stiliste."
+      }
+    }
+  },
+  "gallery": {
+    "eyebrow": "Galerie",
+    "title": "Lucrările noastre",
+    "subtitle": "O selecție din munca noastră — fiecare detaliu contează."
+  },
+  "testimonials": {
+    "eyebrow": "Recenzii",
+    "title": "Ce spun clientele noastre",
+    "subtitle": "Avem norocul să primim zilnic cuvinte calde. Iată câteva.",
+    "items": {
+      "maria": {
+        "name": "Maria T.",
+        "service": "Manichiură + Pedichiură",
+        "text": "Cel mai bun salon din Chișinău! Atmosferă plăcută, fete profesioniste și rezultatul — perfect. Recomand cu drag tuturor prietenelor mele."
+      },
+      "elena": {
+        "name": "Elena V.",
+        "service": "Extensii gene",
+        "text": "Genele mele arată incredibil de natural și rezistă luni de zile. Sunt o clientă fidelă de peste un an și nu m-aș duce în altă parte."
+      },
+      "ana": {
+        "name": "Ana S.",
+        "service": "Machiaj de mireasă",
+        "text": "Machiajul de mireasă a fost exact ce mi-am dorit — delicat, rezistent și impecabil pe tot parcursul zilei. Mulțumesc, Honey!"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Vino la noi",
+    "subtitle": "Suntem aici să te răsfățăm. Rezervă online sau scrie-ne pe WhatsApp.",
+    "addressLabel": "Adresă",
+    "phoneLabel": "Telefon",
+    "hoursLabel": "Program",
+    "emailLabel": "Email",
+    "hoursWeekdays": "Luni — Vineri",
+    "hoursSaturday": "Sâmbătă",
+    "hoursSunday": "Duminică",
+    "directions": "Deschide în Google Maps",
+    "writeWhatsapp": "Scrie pe WhatsApp",
+    "call": "Sună acum",
+    "book": "Rezervă online"
+  },
+  "booking": {
+    "title": "Rezervă-ți momentul de răsfăț",
+    "subtitle": "Programare online disponibilă 24/7 prin Altegio. Alege serviciul, ora și specialistul în câteva secunde.",
+    "openWidget": "Deschide programarea",
+    "fallback": "Nu funcționează? Sună-ne direct sau scrie pe WhatsApp."
+  },
+  "footer": {
+    "tagline": "Frumusețea ta, atinsă de dulceața mierii.",
+    "explore": "Navigare",
+    "services": "Servicii",
+    "contact": "Contact",
+    "follow": "Urmărește-ne",
+    "rights": "Toate drepturile rezervate.",
+    "madeWith": "Realizat cu grijă în Chișinău."
+  },
+  "common": {
+    "currency": "MDL"
+  }
+}

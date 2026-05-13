@@ -1,0 +1,148 @@
+{
+  "meta": {
+    "title": "Honey Beauty Salon — Beauty, kissed by honey",
+    "description": "Premium beauty salon in Chișinău. Manicure, pedicure, lashes, brows, makeup and hair. Book online in seconds.",
+    "ogAlt": "Honey Beauty Salon"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "gallery": "Gallery",
+    "testimonials": "Reviews",
+    "contact": "Contact",
+    "book": "Book now",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "language": {
+    "label": "Language",
+    "ro": "Română",
+    "ru": "Русский",
+    "en": "English"
+  },
+  "hero": {
+    "eyebrow": "Premium beauty salon",
+    "title": "Beauty, kissed by <gold>honey</gold>",
+    "subtitle": "Refined treatments, expert hands and an atmosphere made for slowing down. At Honey, every detail is for you.",
+    "ctaPrimary": "Book online",
+    "ctaSecondary": "Explore services",
+    "stats": {
+      "clients": "1500+ happy clients",
+      "rating": "4.9 ★ on Google",
+      "experience": "5+ years of expertise"
+    }
+  },
+  "about": {
+    "eyebrow": "About Honey",
+    "title": "A salon designed with care, for you",
+    "p1": "At Honey Beauty Salon we believe beauty is a ritual — a moment that's yours alone, when you stop, breathe and feel beautiful. Our team blends classic techniques with modern trends, using premium products and tools sterilised to the highest standards.",
+    "p2": "Whether you drop in for a quick manicure or want a full look for a special occasion, you'll walk out glowing.",
+    "highlights": {
+      "premium": "Premium products",
+      "premiumDesc": "Internationally recognised professional brands.",
+      "hygiene": "Medical-grade sterilisation",
+      "hygieneDesc": "Autoclave-sterilised tools for every single client.",
+      "team": "Experienced team",
+      "teamDesc": "Certified specialists with years of experience.",
+      "comfort": "Warm atmosphere",
+      "comfortDesc": "An intimate space designed for total relaxation."
+    }
+  },
+  "services": {
+    "eyebrow": "Our services",
+    "title": "Everything you need to glow",
+    "subtitle": "From flawless hands to captivating eyes — every service is delivered with passion and precision.",
+    "from": "from",
+    "duration": "Duration",
+    "book": "Book",
+    "viewAll": "See all services",
+    "items": {
+      "manicure": {
+        "title": "Manicure",
+        "description": "Classic, Japanese or premium gel manicure. Perfect shapes, custom design and an impeccable finish."
+      },
+      "pedicure": {
+        "title": "Pedicure",
+        "description": "SPA pedicure with full care, exfoliation and long-lasting finish — for perfectly groomed feet."
+      },
+      "lashes": {
+        "title": "Lash extensions",
+        "description": "Classic, 2D, 3D or mega-volume. Comfortable, natural and long-lasting lashes, applied one by one."
+      },
+      "brows": {
+        "title": "Brow design",
+        "description": "Brow architecture, henna or paint tinting, lamination — your gaze, gently enhanced."
+      },
+      "makeup": {
+        "title": "Makeup",
+        "description": "Day, evening or event makeup. Modern techniques and long-wear products."
+      },
+      "hair": {
+        "title": "Hair styling",
+        "description": "Cuts, styling, colouring and treatments. Your hair, in the hands of the best stylists."
+      }
+    }
+  },
+  "gallery": {
+    "eyebrow": "Gallery",
+    "title": "Our work",
+    "subtitle": "A selection of our work — every detail matters."
+  },
+  "testimonials": {
+    "eyebrow": "Reviews",
+    "title": "What our clients say",
+    "subtitle": "We're lucky to receive kind words every day. Here are a few.",
+    "items": {
+      "maria": {
+        "name": "Maria T.",
+        "service": "Manicure + Pedicure",
+        "text": "The best salon in Chișinău! Lovely atmosphere, true professionals and a flawless result. I recommend it to all my friends."
+      },
+      "elena": {
+        "name": "Elena V.",
+        "service": "Lash extensions",
+        "text": "My lashes look incredibly natural and last for months. I've been a regular for over a year and would not go anywhere else."
+      },
+      "ana": {
+        "name": "Ana S.",
+        "service": "Bridal makeup",
+        "text": "My bridal makeup was exactly what I dreamed of — delicate, long-lasting and flawless all day. Thank you, Honey!"
+      }
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Come visit us",
+    "subtitle": "We're here to pamper you. Book online or write to us on WhatsApp.",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "hoursLabel": "Hours",
+    "emailLabel": "Email",
+    "hoursWeekdays": "Mon — Fri",
+    "hoursSaturday": "Saturday",
+    "hoursSunday": "Sunday",
+    "directions": "Open in Google Maps",
+    "writeWhatsapp": "Message on WhatsApp",
+    "call": "Call now",
+    "book": "Book online"
+  },
+  "booking": {
+    "title": "Reserve your moment of bliss",
+    "subtitle": "Online booking available 24/7 via Altegio. Choose a service, time and specialist in seconds.",
+    "openWidget": "Open booking",
+    "fallback": "Not working? Call us or message on WhatsApp."
+  },
+  "footer": {
+    "tagline": "Beauty, kissed by honey.",
+    "explore": "Explore",
+    "services": "Services",
+    "contact": "Contact",
+    "follow": "Follow us",
+    "rights": "All rights reserved.",
+    "madeWith": "Crafted with care in Chișinău."
+  },
+  "common": {
+    "currency": "MDL"
+  }
+}

@@ -36,10 +36,10 @@ export const siteConfig = {
     googleProfile: 'https://share.google/zFuNb1CJMGZZGyGEy',
     writeReview: 'https://share.google/zFuNb1CJMGZZGyGEy'
   },
-  // Altegio booking — replace with your real Altegio company URL.
+  // Altegio booking
   altegio: {
-    bookingUrl: 'https://n123456.alteg.io/company/123456/personal/menu?o=',
-    companyId: '123456'
+    bookingUrl: 'https://n1409537.alteg.io/',
+    companyId: '1409537'
   }
 };
 
@@ -56,18 +56,23 @@ export const photos = {
 };
 
 export type ServiceKey =
+  | 'makeup'
+  | 'brows'
   | 'manicure'
   | 'pedicure'
-  | 'lashes'
-  | 'brows'
+  | 'podologie'
   | 'hair'
-  | 'makeup'
-  | 'barber';
+  | 'hairTreatments'
+  | 'barber'
+  | 'trihologie';
 
 export interface SubService {
   key: string;
   priceFrom: number;
-  duration: string;
+  priceTo?: number;
+  duration?: string;
+  /** If true, the UI looks up `subItems.<key>Desc` for an additional description line. */
+  hasDescription?: boolean;
 }
 
 export interface ServiceItem {
@@ -80,108 +85,176 @@ export interface ServiceItem {
 }
 
 /**
- * Service catalog with sub-services (full menu).
- * Sub-service keys are translated in messages/<locale>.json under
- * services.items.<service>.subItems.<sub>.name.
- * Prices below are reasonable placeholders — replace with your real menu.
+ * Service catalog with full sub-service price list.
+ * Translations live in messages/<locale>.json under
+ * services.items.<service>.subItems.<sub> (name) and .<sub>Desc (optional).
  */
 export const services: ServiceItem[] = [
   {
-    key: 'manicure',
-    priceFrom: 350,
+    key: 'makeup',
+    priceFrom: 800,
     currency: 'MDL',
     duration: '60–90 min',
-    image: '/photos/service-manicure.jpg',
+    image: '/photos/service-makeup.jpg',
     subServices: [
-      { key: 'classic', priceFrom: 350, duration: '60 min' },
-      { key: 'japanese', priceFrom: 400, duration: '75 min' },
-      { key: 'gel', priceFrom: 500, duration: '90 min' },
-      { key: 'gelPolish', priceFrom: 300, duration: '45 min' },
-      { key: 'design', priceFrom: 50, duration: '+15 min' }
-    ]
-  },
-  {
-    key: 'pedicure',
-    priceFrom: 450,
-    currency: 'MDL',
-    duration: '75–90 min',
-    image: '/photos/service-pedicure.jpg',
-    subServices: [
-      { key: 'classic', priceFrom: 450, duration: '75 min' },
-      { key: 'spa', priceFrom: 550, duration: '90 min' },
-      { key: 'gelPolish', priceFrom: 600, duration: '90 min' },
-      { key: 'kids', priceFrom: 250, duration: '45 min' }
-    ]
-  },
-  {
-    key: 'lashes',
-    priceFrom: 500,
-    currency: 'MDL',
-    duration: '90–150 min',
-    image:
-      'https://images.unsplash.com/photo-1583241800698-9c2e30a4f3f8?auto=format&fit=crop&w=1200&q=80',
-    subServices: [
-      { key: 'classic', priceFrom: 500, duration: '90 min' },
-      { key: 'volume2D', priceFrom: 700, duration: '120 min' },
-      { key: 'volume3D', priceFrom: 800, duration: '130 min' },
-      { key: 'mega', priceFrom: 900, duration: '150 min' },
-      { key: 'fill', priceFrom: 350, duration: '60 min' }
+      { key: 'day', priceFrom: 800 },
+      { key: 'evening', priceFrom: 1200 },
+      { key: 'smokey', priceFrom: 1200, priceTo: 1500 },
+      { key: 'bridal', priceFrom: 1500, priceTo: 2600 }
     ]
   },
   {
     key: 'brows',
     priceFrom: 250,
     currency: 'MDL',
-    duration: '45 min',
+    duration: '30–60 min',
     image:
       'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=80',
     subServices: [
-      { key: 'architecture', priceFrom: 250, duration: '30 min' },
-      { key: 'henna', priceFrom: 300, duration: '45 min' },
-      { key: 'paint', priceFrom: 250, duration: '30 min' },
-      { key: 'lamination', priceFrom: 450, duration: '60 min' }
+      { key: 'styling', priceFrom: 250 },
+      { key: 'tintStyle', priceFrom: 400 },
+      { key: 'lamination', priceFrom: 550 },
+      { key: 'laminationTint', priceFrom: 600 }
+    ]
+  },
+  {
+    key: 'manicure',
+    priceFrom: 350,
+    currency: 'MDL',
+    duration: '60–120 min',
+    image: '/photos/service-manicure.jpg',
+    subServices: [
+      { key: 'classic', priceFrom: 400 },
+      { key: 'gelPolish', priceFrom: 550 },
+      { key: 'removeGel', priceFrom: 150 },
+      { key: 'gelCoverage', priceFrom: 600 },
+      { key: 'extension12', priceFrom: 600 },
+      { key: 'extension23', priceFrom: 650 },
+      { key: 'extension45', priceFrom: 800 },
+      { key: 'men', priceFrom: 400 },
+      { key: 'kids', priceFrom: 350 },
+      { key: 'frenchDesign', priceFrom: 100 }
+    ]
+  },
+  {
+    key: 'pedicure',
+    priceFrom: 500,
+    currency: 'MDL',
+    duration: '60–90 min',
+    image: '/photos/service-pedicure.jpg',
+    subServices: [
+      { key: 'hygienic', priceFrom: 500, duration: '60 min' },
+      { key: 'spaRituals', priceFrom: 800 },
+      { key: 'gelPolish', priceFrom: 750 },
+      { key: 'spaGel', priceFrom: 1000 },
+      { key: 'menHygienic', priceFrom: 500, duration: '60 min' },
+      { key: 'menSpa', priceFrom: 800 }
+    ]
+  },
+  {
+    key: 'podologie',
+    priceFrom: 200,
+    currency: 'MDL',
+    duration: 'varies',
+    image:
+      'https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=1200&q=80',
+    subServices: [
+      { key: 'consultation', priceFrom: 200 },
+      { key: 'medicalPedicure', priceFrom: 700, priceTo: 1000 },
+      { key: 'solesTreatment', priceFrom: 600 },
+      { key: 'onicomicoza1', priceFrom: 350 },
+      { key: 'onicomicoza2', priceFrom: 500 },
+      { key: 'onicomicozaAll', priceFrom: 700 },
+      { key: 'correctionSystem', priceFrom: 1000 },
+      { key: 'repeatVisit', priceFrom: 800 },
+      { key: 'onicogrifoza1', priceFrom: 200 },
+      { key: 'onicogrifozaMulti', priceFrom: 400 },
+      { key: 'callusRemoval12', priceFrom: 250, priceTo: 350 },
+      { key: 'callusRemoval35', priceFrom: 350, priceTo: 500 },
+      { key: 'subungualHematoma', priceFrom: 300 },
+      { key: 'onicoliza1', priceFrom: 200 },
+      { key: 'onicoliza2', priceFrom: 300 },
+      { key: 'onicolizaAll', priceFrom: 500 },
+      { key: 'ingrownStI', priceFrom: 400 },
+      { key: 'ingrownStII', priceFrom: 500 },
+      { key: 'ingrownStIII', priceFrom: 700 },
+      { key: 'bandage', priceFrom: 200 }
     ]
   },
   {
     key: 'hair',
-    priceFrom: 400,
+    priceFrom: 500,
     currency: 'MDL',
-    duration: '60–120 min',
+    duration: '60–180 min',
     image: '/photos/service-hair-balayage.jpg',
     subServices: [
-      { key: 'cut', priceFrom: 400, duration: '60 min' },
-      { key: 'styling', priceFrom: 450, duration: '60 min' },
-      { key: 'event', priceFrom: 700, duration: '90 min' },
-      { key: 'colorSingle', priceFrom: 700, duration: '120 min' },
-      { key: 'balayage', priceFrom: 1200, duration: '180 min' },
-      { key: 'keratin', priceFrom: 1500, duration: '180 min' }
+      { key: 'cutShort', priceFrom: 500 },
+      { key: 'cutMedium', priceFrom: 600 },
+      { key: 'cutLong', priceFrom: 700, priceTo: 1000 },
+      { key: 'styling', priceFrom: 600, priceTo: 1500 },
+      { key: 'bridalStyling', priceFrom: 1500, priceTo: 2800 },
+      { key: 'simpleStyle', priceFrom: 500, priceTo: 700 },
+      { key: 'brushing', priceFrom: 600, priceTo: 750 },
+      { key: 'coloring', priceFrom: 1250, priceTo: 2000 },
+      { key: 'balayage', priceFrom: 2700, priceTo: 4500 },
+      { key: 'airTouch', priceFrom: 3500, priceTo: 6000 },
+      { key: 'toning', priceFrom: 1400, priceTo: 2000 },
+      { key: 'roots', priceFrom: 900, priceTo: 1300 }
     ]
   },
   {
-    key: 'makeup',
-    priceFrom: 600,
+    key: 'hairTreatments',
+    priceFrom: 450,
     currency: 'MDL',
-    duration: '60 min',
-    image: '/photos/service-makeup.jpg',
+    duration: '30–60 min',
+    image: '/photos/service-hair-2.jpg',
     subServices: [
-      { key: 'day', priceFrom: 600, duration: '60 min' },
-      { key: 'evening', priceFrom: 800, duration: '75 min' },
-      { key: 'bridal', priceFrom: 1500, duration: '90 min' },
-      { key: 'lesson', priceFrom: 1000, duration: '120 min' }
+      { key: 'keunePower', priceFrom: 900, priceTo: 1200 },
+      { key: 'keuneGlass', priceFrom: 900, priceTo: 1200 },
+      { key: 'keuneColor', priceFrom: 900, priceTo: 1200 },
+      { key: 'keuneNourish', priceFrom: 900, priceTo: 1200 },
+      { key: 'keuneDetox', priceFrom: 900, priceTo: 1200 },
+      { key: 'keuneCurl', priceFrom: 900, priceTo: 1200 },
+      { key: 'nashiArgan', priceFrom: 700, priceTo: 1300 },
+      { key: 'davinesGloss', priceFrom: 700, priceTo: 1500 },
+      { key: 'naturalTech', priceFrom: 700, priceTo: 1300 },
+      { key: 'davinesOnProtection', priceFrom: 700, priceTo: 1300 },
+      { key: 'davines5min', priceFrom: 450, priceTo: 900 },
+      { key: 'kurlIdentity', priceFrom: 700, priceTo: 1300 },
+      { key: 'armoniaScalp', priceFrom: 700, priceTo: 1300 }
     ]
   },
   {
     key: 'barber',
-    priceFrom: 250,
+    priceFrom: 150,
     currency: 'MDL',
-    duration: '45–60 min',
+    duration: '30–60 min',
     image: '/photos/service-barber-honey.jpg',
     subServices: [
-      { key: 'classic', priceFrom: 250, duration: '45 min' },
-      { key: 'beard', priceFrom: 350, duration: '60 min' },
-      { key: 'beardOnly', priceFrom: 200, duration: '30 min' },
-      { key: 'razor', priceFrom: 250, duration: '30 min' },
-      { key: 'kids', priceFrom: 200, duration: '40 min' }
+      { key: 'kidsCut', priceFrom: 400 },
+      { key: 'menCut', priceFrom: 400, priceTo: 500 },
+      { key: 'complexCutBeard', priceFrom: 600 },
+      { key: 'beardShape', priceFrom: 250 },
+      { key: 'beardTone', priceFrom: 350 },
+      { key: 'hairTone', priceFrom: 400, priceTo: 700 },
+      { key: 'waxNose', priceFrom: 150 },
+      { key: 'waxEars', priceFrom: 150 }
+    ]
+  },
+  {
+    key: 'trihologie',
+    priceFrom: 400,
+    currency: 'MDL',
+    duration: '20–60 min',
+    image: '/photos/service-hair-3.jpg',
+    subServices: [
+      { key: 'consultDiagnosis', priceFrom: 700, duration: '30–40 min', hasDescription: true },
+      { key: 'tricoscopy', priceFrom: 500, priceTo: 700, duration: '20–30 min', hasDescription: true },
+      { key: 'maintenance', priceFrom: 800, priceTo: 1000, duration: '40–50 min', hasDescription: true },
+      { key: 'hairLossProtocol', priceFrom: 1200, duration: '50–60 min', hasDescription: true },
+      { key: 'mesotherapy', priceFrom: 1600, duration: '30 min', hasDescription: true },
+      { key: 'ozone', priceFrom: 400, duration: '30 min', hasDescription: true },
+      { key: 'onlineConsult', priceFrom: 600, duration: '20–30 min', hasDescription: true }
     ]
   }
 ];

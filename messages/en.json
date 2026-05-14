@@ -58,85 +58,155 @@
     "book": "Book",
     "viewAll": "See all services",
     "pageTitle": "Full price list",
-    "pageSubtitle": "All our services with up-to-date prices and durations. Book online via Altegio or message us on WhatsApp.",
+    "pageSubtitle": "All our services with up-to-date prices. Book online via Altegio or message us on WhatsApp.",
     "categoryLabel": "Category",
     "noteTitle": "Note",
     "noteText": "Prices may vary based on hair length, chosen design, or products used. For a personalised quote, contact us directly.",
     "backHome": "Back to home",
     "items": {
+      "makeup": {
+        "title": "Make-up",
+        "description": "Day, evening, smokey or bridal makeup — for every special occasion.",
+        "subItems": {
+          "day": "Day makeup",
+          "evening": "Evening makeup",
+          "smokey": "Smokey makeup",
+          "bridal": "Bridal makeup"
+        }
+      },
+      "brows": {
+        "title": "Brows & Lashes",
+        "description": "Styling, tinting and lamination for brows and lashes — your gaze, gently defined.",
+        "subItems": {
+          "styling": "Brow styling",
+          "tintStyle": "Brow tinting + styling",
+          "lamination": "Lamination (lashes/brows)",
+          "laminationTint": "Lamination + tinting (lashes/brows)"
+        }
+      },
       "manicure": {
         "title": "Manicure",
-        "description": "Classic, Japanese or premium gel manicure. Perfect shapes, custom design and an impeccable finish.",
+        "description": "Classic, gel polish, extensions or custom design — for impeccable hands.",
         "subItems": {
           "classic": "Classic manicure",
-          "japanese": "Japanese manicure",
-          "gel": "Gel manicure",
-          "gelPolish": "Gel polish only",
-          "design": "Custom nail art (per nail)"
+          "gelPolish": "Manicure + gel polish",
+          "removeGel": "Gel polish removal",
+          "gelCoverage": "Manicure + gel cover or correction",
+          "extension12": "Extensions size 1-2",
+          "extension23": "Extensions size 2-3",
+          "extension45": "Extensions size 4-5",
+          "men": "Men's hygienic manicure",
+          "kids": "Kids manicure",
+          "frenchDesign": "French / Design"
         }
       },
       "pedicure": {
         "title": "Pedicure",
-        "description": "SPA pedicure with full care, exfoliation and long-lasting finish — for perfectly groomed feet.",
+        "description": "Hygienic or SPA RITUALS pedicure with massage, peeling and jacuzzi.",
         "subItems": {
-          "classic": "Classic pedicure",
-          "spa": "SPA pedicure",
+          "hygienic": "Hygienic pedicure",
+          "spaRituals": "SPA RITUALS pedicure (massage, peeling, jacuzzi)",
           "gelPolish": "Pedicure with gel polish",
-          "kids": "Kids pedicure"
+          "spaGel": "SPA RITUALS pedicure + gel polish",
+          "menHygienic": "Men's hygienic pedicure",
+          "menSpa": "SPA RITUALS men's pedicure"
         }
       },
-      "lashes": {
-        "title": "Lash extensions",
-        "description": "Classic, 2D, 3D or mega-volume. Comfortable, natural and long-lasting lashes, applied one by one.",
+      "podologie": {
+        "title": "Podology",
+        "description": "Medical foot care: onychomycosis, ingrown nails, calluses, hematomas.",
         "subItems": {
-          "classic": "Classic 1D",
-          "volume2D": "Volume 2D",
-          "volume3D": "Volume 3D",
-          "mega": "Mega volume",
-          "fill": "Refill (up to 3 weeks)"
-        }
-      },
-      "brows": {
-        "title": "Brow design",
-        "description": "Brow architecture, henna or paint tinting, lamination — your gaze, gently enhanced.",
-        "subItems": {
-          "architecture": "Brow architecture",
-          "henna": "Henna tinting",
-          "paint": "Paint tinting",
-          "lamination": "Brow lamination"
+          "consultation": "Consultation without procedure",
+          "medicalPedicure": "Medical pedicure",
+          "solesTreatment": "Soles treatment (no toes)",
+          "onicomicoza1": "Onychomycosis — one nail",
+          "onicomicoza2": "Onychomycosis — two nails",
+          "onicomicozaAll": "Onychomycosis — all nails",
+          "correctionSystem": "Corrective system application",
+          "repeatVisit": "Follow-up visit",
+          "onicogrifoza1": "Onychogryphosis — one nail",
+          "onicogrifozaMulti": "Onychogryphosis — two or more",
+          "callusRemoval12": "Plantar calluses — 1-2 spots",
+          "callusRemoval35": "Plantar calluses — 3-5 spots",
+          "subungualHematoma": "Subungual hematoma (1 nail)",
+          "onicoliza1": "Onycholysis — one nail",
+          "onicoliza2": "Onycholysis — two nails",
+          "onicolizaAll": "Onycholysis — all nails",
+          "ingrownStI": "Ingrown nail — Stage I (mild pain)",
+          "ingrownStII": "Ingrown nail — Stage II (acute pain)",
+          "ingrownStIII": "Ingrown nail — Stage III (inflammation, granulation)",
+          "bandage": "Post-procedure dressing"
         }
       },
       "hair": {
-        "title": "Hair styling",
-        "description": "Cuts, styling, colouring and treatments. Your hair, in the hands of the best stylists.",
+        "title": "Hair (Women)",
+        "description": "Cuts, styling, colouring (Balayage, AirTouch), toning and updos for every length.",
         "subItems": {
-          "cut": "Women's haircut",
-          "styling": "Simple blowout",
-          "event": "Event styling",
-          "colorSingle": "Single-tone colouring",
-          "balayage": "Balayage / Ombre",
-          "keratin": "Keratin treatment"
+          "cutShort": "Short hair cut",
+          "cutMedium": "Medium hair cut",
+          "cutLong": "Long hair cut",
+          "styling": "Styling",
+          "bridalStyling": "Bridal styling",
+          "simpleStyle": "Simple updo",
+          "brushing": "Brushing",
+          "coloring": "Hair colouring",
+          "balayage": "Balayage",
+          "airTouch": "AirTouch",
+          "toning": "Toning",
+          "roots": "Root colouring"
         }
       },
-      "makeup": {
-        "title": "Makeup",
-        "description": "Day, evening or event makeup. Modern techniques and long-wear products.",
+      "hairTreatments": {
+        "title": "Hair treatments",
+        "description": "Professional Keune, Davines, Nashi Argan treatments for healthy, shining hair.",
         "subItems": {
-          "day": "Day makeup",
-          "evening": "Evening makeup",
-          "bridal": "Bridal makeup",
-          "lesson": "Individual makeup lesson"
+          "keunePower": "Keune Power & Protect Routine",
+          "keuneGlass": "Keune Glass Hair Routine",
+          "keuneColor": "Keune Color Lock Routine",
+          "keuneNourish": "Keune Nourish Routine",
+          "keuneDetox": "Keune Detox & Balance Routine",
+          "keuneCurl": "Keune Defined Curl Routine",
+          "nashiArgan": "Nashi Argan Filer Therapy",
+          "davinesGloss": "Davines Gloss",
+          "naturalTech": "Natural Tech Nourishing",
+          "davinesOnProtection": "On Protection Davines Treatment",
+          "davines5min": "Davines 5-minute Treatment",
+          "kurlIdentity": "Kurl Identity Treatment Nashi Argan",
+          "armoniaScalp": "Armonia Scalp Detox Treatment Nashi Argan"
         }
       },
       "barber": {
-        "title": "Men's barbering",
-        "description": "Classic and modern cuts, fades, beard shaping and shaving rituals — men deserve a moment of style too.",
+        "title": "Barber",
+        "description": "Men's haircuts, beard shaping, toning and waxing — your ritual of style.",
         "subItems": {
-          "classic": "Classic haircut",
-          "beard": "Haircut + beard",
-          "beardOnly": "Beard shaping",
-          "razor": "Razor shave",
-          "kids": "Kids haircut"
+          "kidsCut": "Kids haircut",
+          "menCut": "Men's haircut",
+          "complexCutBeard": "Complex (haircut + beard)",
+          "beardShape": "Beard shaping",
+          "beardTone": "Beard toning",
+          "hairTone": "Hair toning",
+          "waxNose": "Wax (nose)",
+          "waxEars": "Wax (ears)"
+        }
+      },
+      "trihologie": {
+        "title": "Trichology",
+        "description": "Scalp and hair diagnostics, mesotherapy, ozone therapy and hair-loss protocols — the science of healthy hair.",
+        "subItems": {
+          "consultDiagnosis": "Trichology consultation + scalp/hair diagnosis",
+          "consultDiagnosisDesc": "Scalp and hair fibre analysis, full anamnesis, and personalised care recommendations.",
+          "tricoscopy": "Digital trichoscopy (computer analysis)",
+          "tricoscopyDesc": "Detailed examination with a digital microscope — measuring density, thickness and scalp/hair health.",
+          "maintenance": "Maintenance trichology treatment",
+          "maintenanceDesc": "Professional scalp cleansing, hydration and stimulation, plus therapeutic masks and lotions.",
+          "hairLossProtocol": "Hair-loss treatment protocol (first session)",
+          "hairLossProtocolDesc": "Personalised programme based on diagnosis: intensive professional treatment, trichology massage and targeted stimulation.",
+          "mesotherapy": "Scalp mesotherapy",
+          "mesotherapyDesc": "Microdosed injections of vitamins and peptides that stimulate growth and reduce hair loss.",
+          "ozone": "Scalp ozone therapy",
+          "ozoneDesc": "Scalp oxygenation and detoxification — ideal for sebum control and circulation.",
+          "onlineConsult": "Online trichology consultation",
+          "onlineConsultDesc": "Remote consultation with treatment and product recommendations."
         }
       }
     }

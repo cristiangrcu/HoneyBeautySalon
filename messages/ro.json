@@ -58,85 +58,155 @@
     "book": "Rezervă",
     "viewAll": "Vezi toate serviciile",
     "pageTitle": "Lista completă de servicii",
-    "pageSubtitle": "Toate serviciile noastre, cu prețuri și durate actualizate. Rezervă online prin Altegio sau scrie-ne pe WhatsApp.",
+    "pageSubtitle": "Toate serviciile noastre, cu prețuri actualizate. Rezervă online prin Altegio sau scrie-ne pe WhatsApp.",
     "categoryLabel": "Categorie",
     "noteTitle": "Notă",
     "noteText": "Prețurile pot varia în funcție de lungimea părului, designul ales sau produsele folosite. Pentru o ofertă personalizată, contactează-ne direct.",
     "backHome": "Înapoi acasă",
     "items": {
+      "makeup": {
+        "title": "Make-up",
+        "description": "Machiaj de zi, de seară, Smokey sau pentru mireasă — pentru orice ocazie specială.",
+        "subItems": {
+          "day": "Machiaj de zi",
+          "evening": "Machiaj de seara",
+          "smokey": "Machiaj Smokey",
+          "bridal": "Machiaj Mireasă"
+        }
+      },
+      "brows": {
+        "title": "Sprâncene & Gene",
+        "description": "Stilizare, vopsire și laminare pentru sprâncene și gene — privirea ta, definită cu finețe.",
+        "subItems": {
+          "styling": "Stilizare sprâncene",
+          "tintStyle": "Vopsire sprâncene + stilizare",
+          "lamination": "Laminare (gene/sprâncene)",
+          "laminationTint": "Laminare + Vopsire (gene/sprâncene)"
+        }
+      },
       "manicure": {
         "title": "Manichiură",
-        "description": "Manichiură clasică, japoneză sau cu gel premium. Forme perfecte, design personalizat și o ținută impecabilă.",
+        "description": "Clasică, gel-lac, alungiri sau design personalizat — pentru mâini impecabile.",
         "subItems": {
           "classic": "Manichiură clasică",
-          "japanese": "Manichiură japoneză",
-          "gel": "Manichiură cu gel",
-          "gelPolish": "Acoperire cu gel-lac",
-          "design": "Design individual (per unghie)"
+          "gelPolish": "Manichiură + acoperire gel-lac",
+          "removeGel": "Scoaterea gel-lac",
+          "gelCoverage": "Manichiură + acoperirea sau corecția gel",
+          "extension12": "Alungire mărimea 1-2",
+          "extension23": "Alungire mărimea 2-3",
+          "extension45": "Alungire mărimea 4-5",
+          "men": "Manichiură igienică pentru bărbați",
+          "kids": "Manichiură copii",
+          "frenchDesign": "French / Design"
         }
       },
       "pedicure": {
         "title": "Pedichiură",
-        "description": "Pedichiură SPA cu îngrijire completă, exfoliere și acoperire de lungă durată — pentru picioare perfect îngrijite.",
+        "description": "Pedichiură igienică sau SPA RITUALS cu masaj, peeling și jacuzzi.",
         "subItems": {
-          "classic": "Pedichiură clasică",
-          "spa": "Pedichiură SPA",
-          "gelPolish": "Pedichiură cu gel-lac",
-          "kids": "Pedichiură copii"
+          "hygienic": "Pedichiură igienică",
+          "spaRituals": "SPA RITUALS pedichiură (masaj, peeling, jacuzzi)",
+          "gelPolish": "Pedichiură cu acoperire gel-lac",
+          "spaGel": "SPA RITUALS pedichiură + gel-lac",
+          "menHygienic": "Pedichiură igienică bărbați",
+          "menSpa": "SPA RITUALS pedichiură bărbați"
         }
       },
-      "lashes": {
-        "title": "Extensii de gene",
-        "description": "Clasic, 2D, 3D sau efect mega-volum. Gene confortabile, naturale și rezistente, aplicate fir cu fir.",
+      "podologie": {
+        "title": "Podologie",
+        "description": "Servicii medicale pentru picioare: onicomicoză, unghie încarnată, bătături, hematoame.",
         "subItems": {
-          "classic": "Extensii clasice 1D",
-          "volume2D": "Volum 2D",
-          "volume3D": "Volum 3D",
-          "mega": "Mega-volum",
-          "fill": "Corectare (până la 3 săptămâni)"
-        }
-      },
-      "brows": {
-        "title": "Design sprâncene",
-        "description": "Arhitectură sprâncene, vopsit cu henna sau vopsea, laminare — privirea ta, accentuată cu finețe.",
-        "subItems": {
-          "architecture": "Arhitectură sprâncene",
-          "henna": "Vopsit cu henna",
-          "paint": "Vopsit cu vopsea",
-          "lamination": "Laminare sprâncene"
+          "consultation": "Consultație fără procedură",
+          "medicalPedicure": "Pedichiură medicală",
+          "solesTreatment": "Prelucrarea tălpilor (fără degete)",
+          "onicomicoza1": "Onicomicoză — o unghie",
+          "onicomicoza2": "Onicomicoză — două unghii",
+          "onicomicozaAll": "Onicomicoză — toate unghiile",
+          "correctionSystem": "Aplicarea sistemului de corecție",
+          "repeatVisit": "Vizită repetată",
+          "onicogrifoza1": "Onicogrifoză — o unghie",
+          "onicogrifozaMulti": "Onicogrifoză — două și mai multe",
+          "callusRemoval12": "Bătături de tip cui — 1-2 localizări",
+          "callusRemoval35": "Bătături de tip cui — 3-5 localizări",
+          "subungualHematoma": "Hematom subunghial (1 unghie)",
+          "onicoliza1": "Onicoliză — o unghie",
+          "onicoliza2": "Onicoliză — două unghii",
+          "onicolizaAll": "Onicoliză — toate unghiile",
+          "ingrownStI": "Unghie încarnată — St. I (durere ușoară)",
+          "ingrownStII": "Unghie încarnată — St. II (durere acută)",
+          "ingrownStIII": "Unghie încarnată — St. III (inflamație, granulație)",
+          "bandage": "Pansament după procedură"
         }
       },
       "hair": {
-        "title": "Coafură & Păr",
-        "description": "Tunsori, coafuri, vopsit și tratamente. Părul tău, în mâinile celor mai bune stiliste.",
+        "title": "Păr Femei",
+        "description": "Tunsori, coafuri, vopsit (Balayage, AirTouch), tonare și aranjare pentru toate lungimile.",
         "subItems": {
-          "cut": "Tunsoare femei",
-          "styling": "Coafură simplă",
-          "event": "Coafură pentru evenimente",
-          "colorSingle": "Vopsit într-o nuanță",
-          "balayage": "Balayage / Ombre",
-          "keratin": "Tratament cheratină"
+          "cutShort": "Tunsoare păr scurt",
+          "cutMedium": "Tunsoare păr mediu",
+          "cutLong": "Tunsoare păr lung",
+          "styling": "Coafură",
+          "bridalStyling": "Coafură mireasă",
+          "simpleStyle": "Aranjare",
+          "brushing": "Brushing",
+          "coloring": "Vopsirea părului",
+          "balayage": "Balayage",
+          "airTouch": "AirTouch",
+          "toning": "Tonare",
+          "roots": "Vopsire rădăcini"
         }
       },
-      "makeup": {
-        "title": "Machiaj",
-        "description": "Machiaj de zi, de seară sau pentru evenimente speciale. Tehnici moderne și produse de lungă durată.",
+      "hairTreatments": {
+        "title": "Tratamente pentru păr",
+        "description": "Tratamente profesionale Keune, Davines, Nashi Argan pentru păr sănătos și strălucitor.",
         "subItems": {
-          "day": "Machiaj de zi",
-          "evening": "Machiaj de seară",
-          "bridal": "Machiaj de mireasă",
-          "lesson": "Lecție individuală de machiaj"
+          "keunePower": "Keune Power & Protect Routine",
+          "keuneGlass": "Keune Glass Hair Routine",
+          "keuneColor": "Keune Color Lock Routine",
+          "keuneNourish": "Keune Nourish Routine",
+          "keuneDetox": "Keune Detox & Balance Routine",
+          "keuneCurl": "Keune Defined Curl Routine",
+          "nashiArgan": "Nashi Argan Filer Therapy",
+          "davinesGloss": "Davines Gloss",
+          "naturalTech": "Natural Tech Nourishing",
+          "davinesOnProtection": "On Protection Davines Treatment",
+          "davines5min": "Davines Tratament 5 minute",
+          "kurlIdentity": "Kurl Identity Treatment Nashi Argan",
+          "armoniaScalp": "Armonia Scalp Detox Treatment Nashi Argan"
         }
       },
       "barber": {
-        "title": "Tunsoare bărbați",
-        "description": "Tunsori clasice și moderne, fade, conturare barbă și ritualuri de bărbierit — bărbații merită și ei o pauză de stil.",
+        "title": "Barber",
+        "description": "Tunsoare bărbați, modelare barbă, tonare și epilare cu ceară — ritualul tău de stil.",
         "subItems": {
-          "classic": "Tunsoare clasică",
-          "beard": "Tunsoare + barbă",
-          "beardOnly": "Conturare barbă",
-          "razor": "Bărbierit cu brici",
-          "kids": "Tunsoare copii"
+          "kidsCut": "Tunsoare copil",
+          "menCut": "Tunsoare bărbat",
+          "complexCutBeard": "Complex (tunsoare + barbă)",
+          "beardShape": "Modelare barbă",
+          "beardTone": "Tonare barbă",
+          "hairTone": "Tonare păr",
+          "waxNose": "Epilare cu ceară (nas)",
+          "waxEars": "Epilare cu ceară (urechi)"
+        }
+      },
+      "trihologie": {
+        "title": "Trihologie",
+        "description": "Diagnostic scalp și păr, mezoterapie, ozonoterapie și protocoale anti-cădere — știința părului sănătos.",
+        "subItems": {
+          "consultDiagnosis": "Consultație trihologică + diagnostic scalp/păr",
+          "consultDiagnosisDesc": "Analiză stării scalpului și a firului de păr, anamneză completă și recomandări personalizate pentru îngrijire.",
+          "tricoscopy": "Tricoscopie digitală (analiză computerizată)",
+          "tricoscopyDesc": "Examinare detaliată cu microscop digital — determinarea densității, grosimii și stării de sănătate a scalpului și părului.",
+          "maintenance": "Tratament trihologic de întreținere",
+          "maintenanceDesc": "Proceduri profesionale de curățare, hidratare și stimulare a scalpului, aplicare de măști și loțiuni terapeutice.",
+          "hairLossProtocol": "Protocol de tratament pentru căderea părului (prima sesiune)",
+          "hairLossProtocolDesc": "Program personalizat în funcție de diagnostic: tratament intensiv cu produse profesionale, masaj trihologic și stimulare locală.",
+          "mesotherapy": "Mezoterapie scalp",
+          "mesotherapyDesc": "Injecții microdozate cu vitamine și peptide care stimulează creșterea părului și reduc căderea acestuia.",
+          "ozone": "Ozonoterapie scalp",
+          "ozoneDesc": "Oxigenare și detoxifiere a scalpului, ideală pentru controlul sebumului și stimularea circulației.",
+          "onlineConsult": "Consult online trihologic",
+          "onlineConsultDesc": "Consultație la distanță pentru recomandări de tratament și produse profesionale."
         }
       }
     }

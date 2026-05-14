@@ -104,28 +104,40 @@ export default async function ServicesPage({
 
                     <div className="mt-10 overflow-hidden rounded-2xl border border-honey-100 bg-cream-100/40">
                       <ul className="divide-y divide-honey-100">
-                        {service.subServices.map((sub) => (
-                          <li
-                            key={sub.key}
-                            className="grid grid-cols-[1fr_auto] items-baseline gap-x-4 gap-y-1 px-5 py-4 sm:grid-cols-[1fr_auto_auto] sm:gap-x-6 sm:px-6"
-                          >
-                            <span className="font-display text-lg text-ink">
-                              {t(`items.${service.key}.subItems.${sub.key}`)}
-                            </span>
-                            <span className="text-xs uppercase tracking-[0.22em] text-ink-soft/70 sm:text-right">
-                              {sub.duration}
-                            </span>
-                            <span className="col-span-2 flex items-baseline gap-2 font-display text-lg text-honey-700 sm:col-span-1 sm:justify-end">
-                              <span className="text-[10px] uppercase tracking-[0.22em] text-ink-soft/60">
-                                {t('from')}
-                              </span>
-                              <span className="font-medium">
-                                {sub.priceFrom}
-                              </span>
-                              <span className="text-sm">{tCommon('currency')}</span>
-                            </span>
-                          </li>
-                        ))}
+                        {service.subServices.map((sub) => {
+                          const priceLabel = sub.priceTo
+                            ? `${sub.priceFrom}—${sub.priceTo}`
+                            : String(sub.priceFrom);
+                          return (
+                            <li
+                              key={sub.key}
+                              className="flex flex-col gap-2 px-5 py-4 sm:flex-row sm:items-start sm:gap-6 sm:px-6"
+                            >
+                              <div className="flex-1">
+                                <div className="font-display text-lg leading-snug text-ink">
+                                  {t(`items.${service.key}.subItems.${sub.key}`)}
+                                </div>
+                                {sub.hasDescription && (
+                                  <p className="mt-1 text-sm leading-relaxed text-ink-soft">
+                                    {t(`items.${service.key}.subItems.${sub.key}Desc`)}
+                                  </p>
+                                )}
+                                {sub.duration && (
+                                  <div className="mt-1.5 text-[10px] uppercase tracking-[0.22em] text-ink-soft/70">
+                                    {sub.duration}
+                                  </div>
+                                )}
+                              </div>
+                              <div className="flex items-baseline gap-2 whitespace-nowrap font-display text-lg text-honey-700 sm:pt-0.5">
+                                <span className="text-[10px] uppercase tracking-[0.22em] text-ink-soft/60">
+                                  {sub.priceTo ? '' : t('from')}
+                                </span>
+                                <span className="font-medium">{priceLabel}</span>
+                                <span className="text-sm">{tCommon('currency')}</span>
+                              </div>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </div>
 

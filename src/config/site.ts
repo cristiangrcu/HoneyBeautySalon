@@ -313,7 +313,7 @@ export const googleReviews: GoogleReview[] = [
   {
     key: 'elenaCornita',
     rating: 5,
-    image: '/photos/review-elena.jpg',
+    image: '/photos/review-elena.png',
     fallbackImage:
       'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
     date: '2025-04-18'
@@ -321,7 +321,7 @@ export const googleReviews: GoogleReview[] = [
   {
     key: 'adrianaGrecu',
     rating: 5,
-    image: '/photos/review-adriana.jpg',
+    image: '/photos/review-adriana.png',
     fallbackImage:
       'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80',
     date: '2025-03-22'
@@ -329,7 +329,7 @@ export const googleReviews: GoogleReview[] = [
   {
     key: 'igorRailean',
     rating: 5,
-    image: '/photos/review-igor.jpg',
+    image: '/photos/review-igor.png',
     fallbackImage:
       'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
     date: '2025-02-09'

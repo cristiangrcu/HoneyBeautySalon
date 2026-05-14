@@ -319,9 +319,9 @@ export const googleReviews: GoogleReview[] = [
     date: '2025-04-18'
   },
   {
-    key: 'adrianaGrecu',
+    key: 'rominaCojocari',
     rating: 5,
-    image: '/photos/review-adriana.png',
+    image: '/photos/review-romina.png',
     fallbackImage:
       'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80',
     date: '2025-03-22'

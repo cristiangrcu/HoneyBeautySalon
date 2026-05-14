@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import type { Metadata } from 'next';
 import { Link } from '@/i18n/routing';
-import { services, siteConfig } from '@/config/site';
+import { courses, services, siteConfig } from '@/config/site';
 
 export async function generateMetadata({
   params
@@ -25,6 +25,7 @@ export default async function ServicesPage({
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('services');
+  const tCourses = await getTranslations('courses');
   const tCommon = await getTranslations('common');
 
   return (
@@ -61,6 +62,12 @@ export default async function ServicesPage({
                 {t(`items.${service.key}.title`)}
               </a>
             ))}
+            <a
+              href="#courses"
+              className="rounded-full border border-honey-400 bg-honey-50 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.22em] text-honey-800 backdrop-blur transition-colors hover:bg-honey-100"
+            >
+              {tCourses('eyebrow')}
+            </a>
           </nav>
         </div>
       </section>
@@ -164,6 +171,123 @@ export default async function ServicesPage({
               </article>
             );
           })}
+
+          <section
+            id="courses"
+            className="scroll-mt-28 rounded-[2.5rem] bg-ink px-6 py-16 text-cream-100 sm:px-12 sm:py-20"
+          >
+            <div className="mx-auto max-w-3xl text-center">
+              <p className="eyebrow justify-center !text-honey-300 before:!bg-honey-300">
+                {tCourses('eyebrow')}
+              </p>
+              <h2 className="mt-6 font-display font-light text-4xl leading-[1.05] tracking-[-0.01em] text-cream-50 sm:text-5xl"
+                  style={{ fontVariationSettings: '"opsz" 144, "SOFT" 50' }}>
+                {tCourses('sectionTitle')}
+              </h2>
+              <p className="mt-5 text-base leading-relaxed text-cream-200/80 sm:text-lg">
+                {tCourses('sectionSubtitle')}
+              </p>
+            </div>
+
+            {courses.map((course) => (
+              <article
+                key={course.key}
+                className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.15fr] lg:gap-14"
+              >
+                <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] ring-1 ring-white/10">
+                  <Image
+                    src={course.image}
+                    alt=""
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 45vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute right-4 top-4 inline-flex items-center gap-2 rounded-full bg-cream-50/95 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.32em] text-ink">
+                    {tCourses(`items.${course.key}.tag`)}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-display font-light text-3xl leading-tight text-cream-50 sm:text-4xl"
+                      style={{ fontVariationSettings: '"opsz" 144, "SOFT" 60' }}>
+                    {tCourses(`items.${course.key}.title`)}
+                  </h3>
+
+                  <div className="mt-6 grid grid-cols-2 gap-4 rounded-2xl border border-white/10 bg-white/5 p-5">
+                    <div>
+                      <div className="text-[10px] uppercase tracking-[0.32em] text-honey-300">
+                        {tCourses('duration')}
+                      </div>
+                      <div className="mt-1 font-display text-lg text-cream-50">
+                        {tCourses(`items.${course.key}.durationLong`)}
+                      </div>
+                    </div>
+                    <div>
+                      <div className="text-[10px] uppercase tracking-[0.32em] text-honey-300">
+                        {tCourses('price')}
+                      </div>
+                      <div className="mt-1 flex items-baseline gap-1.5 font-display text-2xl text-honey-300">
+                        <span className="font-medium">{course.price.toLocaleString('ro-MD')}</span>
+                        <span className="text-sm text-honey-300/80">{tCommon('currency')}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="mt-6 italic leading-relaxed text-cream-200/85">
+                    {tCourses(`items.${course.key}.intro`)}
+                  </p>
+
+                  <div className="mt-8 grid gap-6 sm:grid-cols-2">
+                    <div>
+                      <div className="text-[10px] font-semibold uppercase tracking-[0.32em] text-honey-300">
+                        {tCourses('learnTitle')}
+                      </div>
+                      <ul className="mt-4 space-y-3 text-sm leading-relaxed text-cream-200/85">
+                        {Array.from({ length: course.learnPoints }, (_, i) => (
+                          <li key={i} className="flex gap-3">
+                            <span className="mt-1.5 inline-block h-1 w-3 shrink-0 bg-honey-300" />
+                            <span>{tCourses(`items.${course.key}.learn${i + 1}`)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="text-[10px] font-semibold uppercase tracking-[0.32em] text-honey-300">
+                        {tCourses('whyTitle')}
+                      </div>
+                      <ul className="mt-4 space-y-3 text-sm leading-relaxed text-cream-200/85">
+                        {Array.from({ length: course.whyPoints }, (_, i) => (
+                          <li key={i} className="flex gap-3">
+                            <span className="mt-1.5 inline-block h-1 w-3 shrink-0 bg-honey-300" />
+                            <span>{tCourses(`items.${course.key}.why${i + 1}`)}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div className="mt-10 flex flex-wrap gap-3">
+                    <a
+                      href={siteConfig.altegio.bookingUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-gold"
+                    >
+                      {tCourses('book')}
+                    </a>
+                    <a
+                      href={`https://wa.me/${siteConfig.whatsapp}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn border border-honey-300/40 text-cream-100 hover:border-honey-300 hover:text-cream-50"
+                    >
+                      WhatsApp
+                    </a>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </section>
 
           <aside className="rounded-3xl border border-honey-100 bg-cream-100/50 p-8 sm:p-10">
             <p className="eyebrow">{t('noteTitle')}</p>

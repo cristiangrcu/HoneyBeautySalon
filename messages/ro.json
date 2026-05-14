@@ -242,6 +242,58 @@
       }
     }
   },
+  "rateUs": {
+    "eyebrow": "Părerea ta contează",
+    "title": "Cum a fost vizita ta la Honey?",
+    "subtitle": "Spune-ne în câteva secunde — ne ajuți să creștem și să oferim experiențe și mai bune.",
+    "starsLabel": "Selectează o evaluare",
+    "stars": {
+      "1": "Foarte slab",
+      "2": "Slab",
+      "3": "Ok",
+      "4": "Bun",
+      "5": "Excelent"
+    },
+    "publicTitle": "Minunat — ne bucurăm că ți-a plăcut!",
+    "publicSubtitle": "Recenzia ta pe Google ne ajută enorm. Durează doar 30 de secunde.",
+    "publicCta": "Lasă o recenzie pe Google",
+    "privateTitle": "Ne pare rău că nu a fost perfect",
+    "privateSubtitle": "Spune-ne ce putem îmbunătăți — feedbackul tău rămâne între noi.",
+    "privatePlaceholder": "Ce ar fi putut fi mai bine? (opțional)",
+    "privateCta": "Trimite feedback pe WhatsApp",
+    "thankTitle": "Mulțumim!",
+    "thankSubtitle": "Apreciem timpul pe care l-ai oferit. Te așteptăm cu drag la următoarea vizită.",
+    "done": "Gata",
+    "back": "Înapoi",
+    "whatsappPrefix": "Salut Honey! Am dat {rating}★."
+  },
+  "courses": {
+    "eyebrow": "Cursuri",
+    "sectionTitle": "Învață cu noi",
+    "sectionSubtitle": "Cursuri private 1 la 1 cu trainerii Honey. Înveți tehnica, atitudinea și încrederea — în propriul tău ritm.",
+    "duration": "Durată",
+    "price": "Investiție",
+    "learnTitle": "Ce vei învăța",
+    "whyTitle": "De ce să alegi acest curs",
+    "book": "Rezervă cursul",
+    "items": {
+      "selfMakeup": {
+        "title": "Curs Self Make-up",
+        "tag": "Curs individual",
+        "durationLong": "3 zile × 4 ore/zi",
+        "intro": "Cursul se desfășoară individual, pentru ca tu să beneficiezi de toată atenția trainerului și să te asiguri că înveți corect fiecare etapă. Astfel, rezultatele se văd imediat — și tu pleci mulțumită, încrezătoare și sigură pe abilitățile tale.",
+        "learn1": "Lucrăm cu materialele noastre profesionale — totul este pregătit pentru tine.",
+        "learn2": "Îți dezvoltăm tehnica, atitudinea și încrederea în procesul de machiaj.",
+        "learn3": "Realizezi 4 tipuri de machiaj: de zi, de seară, pentru eveniment și pentru fotografie/video.",
+        "learn4": "Înveți cum să alegi corect produsele, culorile și texturile potrivite tenului tău.",
+        "learn5": "Primești feedback personalizat și corecturi pe parcursul fiecărei sesiuni.",
+        "why1": "Program intensiv de 3 zile, perfect pentru femeile ocupate.",
+        "why2": "Lucrezi 1 la 1 cu trainerul — tot accentul este pe tine.",
+        "why3": "Toate produsele sunt incluse, fără costuri suplimentare.",
+        "why4": "Rezultate vizibile încă de la prima zi: înveți să te machiezi singură, corect și în stilul tău propriu."
+      }
+    }
+  },
   "contact": {
     "eyebrow": "Contact",
     "title": "Vino la noi",

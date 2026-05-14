@@ -4,6 +4,7 @@ import { About } from '@/components/About';
 import { Services } from '@/components/Services';
 import { Gallery } from '@/components/Gallery';
 import { Testimonials } from '@/components/Testimonials';
+import { RateUs } from '@/components/RateUs';
 import { Booking } from '@/components/Booking';
 import { Contact } from '@/components/Contact';
 
@@ -22,6 +23,7 @@ export default async function HomePage({
       <Services />
       <Gallery />
       <Testimonials />
+      <RateUs />
       <Booking />
       <Contact />
     </>

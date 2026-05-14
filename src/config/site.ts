@@ -33,8 +33,8 @@ export const siteConfig = {
   reviews: {
     rating: 5.0,
     count: 120,
-    googleProfile: 'https://share.google/zFuNb1CJMGZZGyGEy',
-    writeReview: 'https://share.google/zFuNb1CJMGZZGyGEy'
+    googleProfile: 'https://share.google/5r03fTPac1BoaMMI4',
+    writeReview: 'https://share.google/5r03fTPac1BoaMMI4'
   },
   // Altegio booking
   altegio: {
@@ -256,6 +256,29 @@ export const services: ServiceItem[] = [
       { key: 'ozone', priceFrom: 400, duration: '30 min', hasDescription: true },
       { key: 'onlineConsult', priceFrom: 600, duration: '20–30 min', hasDescription: true }
     ]
+  }
+];
+
+export interface Course {
+  key: string;
+  price: number;
+  currency: 'MDL';
+  duration: string;
+  image: string;
+  learnPoints: number;
+  whyPoints: number;
+}
+
+/** Education / courses. Different rendering than regular services. */
+export const courses: Course[] = [
+  {
+    key: 'selfMakeup',
+    price: 6000,
+    currency: 'MDL',
+    duration: '3 zile × 4h',
+    image: '/photos/service-makeup-2.jpg',
+    learnPoints: 5,
+    whyPoints: 4
   }
 ];
 

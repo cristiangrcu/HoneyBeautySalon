@@ -242,6 +242,58 @@
       }
     }
   },
+  "rateUs": {
+    "eyebrow": "Your opinion matters",
+    "title": "How was your visit to Honey?",
+    "subtitle": "Share in a few seconds — it helps us grow and deliver an even better experience.",
+    "starsLabel": "Select a rating",
+    "stars": {
+      "1": "Very poor",
+      "2": "Poor",
+      "3": "Okay",
+      "4": "Good",
+      "5": "Excellent"
+    },
+    "publicTitle": "Wonderful — we're glad you loved it!",
+    "publicSubtitle": "Your review on Google helps us a lot. It only takes 30 seconds.",
+    "publicCta": "Leave a review on Google",
+    "privateTitle": "Sorry it wasn't perfect",
+    "privateSubtitle": "Tell us what we can improve — your message stays between us.",
+    "privatePlaceholder": "What could have been better? (optional)",
+    "privateCta": "Send feedback on WhatsApp",
+    "thankTitle": "Thank you!",
+    "thankSubtitle": "We appreciate your time. We look forward to welcoming you again soon.",
+    "done": "Done",
+    "back": "Back",
+    "whatsappPrefix": "Hi Honey! I rated {rating}★."
+  },
+  "courses": {
+    "eyebrow": "Courses",
+    "sectionTitle": "Learn with us",
+    "sectionSubtitle": "Private 1-on-1 courses with Honey trainers. Learn the technique, mindset and confidence — at your own pace.",
+    "duration": "Duration",
+    "price": "Investment",
+    "learnTitle": "What you'll learn",
+    "whyTitle": "Why choose this course",
+    "book": "Reserve the course",
+    "items": {
+      "selfMakeup": {
+        "title": "Self Make-up Course",
+        "tag": "Individual course",
+        "durationLong": "3 days × 4 hours/day",
+        "intro": "The course is delivered one-on-one so you get the trainer's full attention and master every step correctly. The results show immediately — you leave satisfied, confident and sure of your new skills.",
+        "learn1": "We work with our professional materials — everything is ready for you.",
+        "learn2": "We develop your technique, attitude and confidence in the makeup process.",
+        "learn3": "You'll create 4 types of makeup: day, evening, event, and photo/video.",
+        "learn4": "You'll learn how to choose the right products, colours and textures for your skin tone.",
+        "learn5": "You receive personalised feedback and corrections throughout each session.",
+        "why1": "Intensive 3-day programme — perfect for busy women.",
+        "why2": "Work one-on-one with the trainer — all the focus is on you.",
+        "why3": "All products are included — no hidden costs.",
+        "why4": "Visible results from day one: learn to do your own makeup correctly and in your personal style."
+      }
+    }
+  },
   "contact": {
     "eyebrow": "Contact",
     "title": "Come visit us",

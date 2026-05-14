@@ -225,20 +225,20 @@
     "viewAll": "Vezi toate pe Google",
     "writeReview": "Lasă o recenzie",
     "items": {
-      "maria": {
-        "name": "Maria T.",
-        "service": "Manichiură + Pedichiură",
-        "text": "Cel mai bun salon din Chișinău! Atmosferă plăcută, fete profesioniste și rezultatul — perfect. Recomand cu drag tuturor prietenelor mele."
+      "elenaCornita": {
+        "name": "Elena Corniță",
+        "service": "Manichiură",
+        "text": "Recomand cu drag Honey Salon! Atmosferă foarte plăcută și caldă, iar meșterița a fost extrem de atentă și profesionistă. M-am simțit foarte bine pe tot parcursul vizitei și am plecat super mulțumită. Cu siguranță revin!"
       },
-      "elena": {
-        "name": "Elena V.",
-        "service": "Extensii gene",
-        "text": "Genele mele arată incredibil de natural și rezistă luni de zile. Sunt o clientă fidelă de peste un an și nu m-aș duce în altă parte."
+      "adrianaGrecu": {
+        "name": "Adriana Grecu",
+        "service": "Manichiură",
+        "text": "Un salon nou cu un design modern. Totul foarte estetic și bine planificat. Te simți din primele minute relaxată și în atenție, ceea ce este foarte important pentru o femeie atunci când pășește pragul unui salon de frumusețe. Echipa foarte empatică și călduroasă față de fiecare client în parte. La procedura de manichiură am primit un masaj la picioare cu un aparat specializat ceea ce este wow pentru piața din Chișinău! Revin cu mare drag și recomand!"
       },
-      "ana": {
-        "name": "Ana S.",
-        "service": "Machiaj de mireasă",
-        "text": "Machiajul de mireasă a fost exact ce mi-am dorit — delicat, rezistent și impecabil pe tot parcursul zilei. Mulțumesc, Honey!"
+      "igorRailean": {
+        "name": "Igor Railean",
+        "service": "Barber",
+        "text": "Cele mai bune servicii barber din zonă!"
       }
     }
   },

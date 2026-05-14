@@ -297,30 +297,41 @@ export const galleryImages = [
 export interface GoogleReview {
   key: string;
   rating: number;
+  /** Local avatar path under /public/photos. */
   image: string;
+  /** Unsplash fallback used until the local file is uploaded. */
+  fallbackImage: string;
   date: string;
 }
 
+/**
+ * Real Google reviews curated from the salon's profile.
+ * Drop the reviewer avatars at /public/photos/review-<key>.jpg —
+ * the SmartImage in Testimonials falls back to fallbackImage if missing.
+ */
 export const googleReviews: GoogleReview[] = [
   {
-    key: 'maria',
+    key: 'elenaCornita',
     rating: 5,
-    image:
+    image: '/photos/review-elena.jpg',
+    fallbackImage:
       'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80',
-    date: '2025-03-12'
+    date: '2025-04-18'
   },
   {
-    key: 'elena',
+    key: 'adrianaGrecu',
     rating: 5,
-    image:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80',
-    date: '2025-02-04'
+    image: '/photos/review-adriana.jpg',
+    fallbackImage:
+      'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=200&q=80',
+    date: '2025-03-22'
   },
   {
-    key: 'ana',
+    key: 'igorRailean',
     rating: 5,
-    image:
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80',
-    date: '2025-01-21'
+    image: '/photos/review-igor.jpg',
+    fallbackImage:
+      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80',
+    date: '2025-02-09'
   }
 ];

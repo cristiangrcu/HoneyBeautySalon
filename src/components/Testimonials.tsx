@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { googleReviews, siteConfig } from '@/config/site';
+import { SmartImage } from './SmartImage';
 
 export function Testimonials() {
   const t = useTranslations('testimonials');
@@ -62,7 +62,14 @@ export function Testimonials() {
               </blockquote>
               <figcaption className="mt-6 flex items-center gap-3 border-t border-honey-100 pt-5">
                 <div className="relative h-12 w-12 overflow-hidden rounded-full ring-2 ring-honey-200">
-                  <Image src={item.image} alt="" fill sizes="48px" className="object-cover" />
+                  <SmartImage
+                    src={item.image}
+                    fallback={item.fallbackImage}
+                    alt=""
+                    fill
+                    sizes="48px"
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <div className="font-medium text-ink">{t(`items.${item.key}.name`)}</div>

@@ -225,20 +225,20 @@
     "viewAll": "See all on Google",
     "writeReview": "Leave a review",
     "items": {
-      "maria": {
-        "name": "Maria T.",
-        "service": "Manicure + Pedicure",
-        "text": "The best salon in Chișinău! Lovely atmosphere, true professionals and a flawless result. I recommend it to all my friends."
+      "elenaCornita": {
+        "name": "Elena Corniță",
+        "service": "Manicure",
+        "text": "I warmly recommend Honey Salon! A very pleasant and warm atmosphere, and the technician was extremely attentive and professional. I felt great throughout the entire visit and left super happy. I'll definitely be back!"
       },
-      "elena": {
-        "name": "Elena V.",
-        "service": "Lash extensions",
-        "text": "My lashes look incredibly natural and last for months. I've been a regular for over a year and would not go anywhere else."
+      "adrianaGrecu": {
+        "name": "Adriana Grecu",
+        "service": "Manicure",
+        "text": "A new salon with modern design. Everything is so aesthetic and well planned. From the first minutes you feel relaxed and looked after, which is so important for a woman stepping into a beauty salon. A very empathetic and warm team for every client. During the manicure I received a foot massage with a specialised device, which is wow for the Chișinău market! I'll happily return and recommend!"
       },
-      "ana": {
-        "name": "Ana S.",
-        "service": "Bridal makeup",
-        "text": "My bridal makeup was exactly what I dreamed of — delicate, long-lasting and flawless all day. Thank you, Honey!"
+      "igorRailean": {
+        "name": "Igor Railean",
+        "service": "Barber",
+        "text": "Best barber services in this area!"
       }
     }
   },

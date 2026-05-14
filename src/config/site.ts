@@ -32,7 +32,7 @@ export const siteConfig = {
   },
   reviews: {
     rating: 5.0,
-    count: 120,
+    count: 50,
     googleProfile: 'https://share.google/5r03fTPac1BoaMMI4',
     writeReview: 'https://share.google/5r03fTPac1BoaMMI4'
   },

@@ -29,9 +29,10 @@
     "ctaSecondary": "Смотреть услуги",
     "stats": {
       "clients": "1500+ счастливых клиенток",
-      "rating": "4.9 ★ на Google",
+      "rating": "5.0 ★ на Google",
       "experience": "5+ лет опыта"
-    }
+    },
+    "socialLabel": "Соцсети"
   },
   "about": {
     "eyebrow": "О Honey",

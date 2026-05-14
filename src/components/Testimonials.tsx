@@ -1,13 +1,34 @@
 import { useTranslations } from 'next-intl';
+import { Star, PencilLine } from 'lucide-react';
 import { googleReviews, siteConfig } from '@/config/site';
 import { SmartImage } from './SmartImage';
+
+const FLOATING_EMOJIS = [
+  { emoji: '💛', className: 'left-[6%] top-[18%] text-3xl sm:text-4xl animate-float-slow', delay: '0s' },
+  { emoji: '✨', className: 'right-[8%] top-[12%] text-2xl sm:text-3xl animate-float-med', delay: '0.8s' },
+  { emoji: '❤️', className: 'left-[12%] bottom-[14%] text-2xl sm:text-3xl animate-float-med', delay: '1.4s' },
+  { emoji: '👍', className: 'right-[10%] bottom-[20%] text-3xl sm:text-4xl animate-float-slow', delay: '0.4s' },
+  { emoji: '🌟', className: 'left-1/2 top-[8%] text-xl sm:text-2xl animate-float-fast', delay: '1.2s' }
+];
 
 export function Testimonials() {
   const t = useTranslations('testimonials');
 
   return (
-    <section id="testimonials" className="section bg-white">
-      <div className="container-honey">
+    <section id="testimonials" className="relative overflow-hidden bg-white py-20 sm:py-28">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        {FLOATING_EMOJIS.map((item, i) => (
+          <span
+            key={i}
+            className={`absolute select-none opacity-50 ${item.className}`}
+            style={{ animationDelay: item.delay }}
+          >
+            {item.emoji}
+          </span>
+        ))}
+      </div>
+
+      <div className="container-honey relative">
         <div className="mx-auto max-w-2xl text-center">
           <p className="eyebrow justify-center">{t('eyebrow')}</p>
           <h2 className="mt-6 display-title text-balance">{t('title')}</h2>
@@ -37,7 +58,7 @@ export function Testimonials() {
               rel="noopener noreferrer"
               className="btn btn-gold !px-5 !py-2.5 text-[11px]"
             >
-              <PencilIcon />
+              <PencilLine size={13} strokeWidth={2} aria-hidden="true" />
               {t('writeReview')}
             </a>
           </div>
@@ -47,14 +68,14 @@ export function Testimonials() {
           {googleReviews.map((item) => (
             <figure
               key={item.key}
-              className="relative flex flex-col rounded-3xl border border-honey-100 bg-cream-50 p-7 shadow-soft transition-transform duration-300 hover:-translate-y-1"
+              className="group relative flex flex-col rounded-3xl border border-honey-100 bg-white p-7 shadow-soft transition-transform duration-300 hover:-translate-y-1"
             >
-              <div className="absolute right-6 top-6 flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-soft">
+              <div className="absolute right-6 top-6 flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-soft ring-1 ring-honey-100">
                 <GoogleIcon className="h-5 w-5" />
               </div>
               <div className="mb-4 flex gap-0.5 text-honey-500">
                 {Array.from({ length: item.rating }).map((_, i) => (
-                  <StarFilled key={i} />
+                  <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
                 ))}
               </div>
               <blockquote className="flex-1 font-display text-lg leading-relaxed text-ink">
@@ -97,7 +118,7 @@ function RatingBadge({
   countLabel: string;
 }) {
   return (
-    <div className="flex items-center gap-4 rounded-full border border-honey-200 bg-cream-50 px-5 py-3 shadow-soft">
+    <div className="flex items-center gap-4 rounded-full border border-honey-200 bg-cream-100/60 px-5 py-3 shadow-soft backdrop-blur">
       <GoogleIcon className="h-6 w-6 shrink-0" />
       <div className="flex flex-col">
         <div className="flex items-center gap-2">
@@ -106,7 +127,7 @@ function RatingBadge({
           </span>
           <span className="flex gap-0.5 text-honey-500">
             {Array.from({ length: 5 }).map((_, i) => (
-              <StarFilled key={i} />
+              <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
             ))}
           </span>
         </div>
@@ -117,17 +138,6 @@ function RatingBadge({
         </div>
       </div>
     </div>
-  );
-}
-
-function StarFilled() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-      <path
-        d="M8 1.5l2 4.2 4.5.6-3.3 3.2.8 4.5L8 11.9 3.9 14l.8-4.5L1.5 6.3l4.5-.6L8 1.5z"
-        fill="currentColor"
-      />
-    </svg>
   );
 }
 
@@ -149,20 +159,6 @@ function GoogleIcon({ className }: { className?: string }) {
       <path
         fill="#1976D2"
         d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.2-4.1 5.6l6.2 5.2C41 35 44 30 44 24c0-1.3-.1-2.4-.4-3.5z"
-      />
-    </svg>
-  );
-}
-
-function PencilIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-      <path
-        d="M9 1.5l3.5 3.5L4 13.5H.5V10L9 1.5z"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        fill="none"
-        strokeLinejoin="round"
       />
     </svg>
   );

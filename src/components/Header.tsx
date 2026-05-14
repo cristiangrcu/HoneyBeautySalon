@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { Menu, X } from 'lucide-react';
 import { Link } from '@/i18n/routing';
 import { Logo } from './Logo';
 import { LanguageSwitcher } from './LanguageSwitcher';
@@ -38,82 +39,92 @@ export function Header() {
     <header
       className={`fixed top-0 z-40 w-full transition-all duration-300 ${
         scrolled
-          ? 'bg-cream-50/90 backdrop-blur-md shadow-[0_1px_0_rgba(165,115,36,0.08)]'
+          ? 'bg-white/85 backdrop-blur-md shadow-[0_1px_0_rgba(107,78,50,0.08)]'
           : 'bg-transparent'
       }`}
     >
-      <div className="container-honey flex items-center justify-between py-4">
-        <Logo />
+      <div className="container-honey grid grid-cols-[1fr_auto_1fr] items-center py-4 sm:py-5">
+        <div className="flex justify-start">
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            aria-label={t('menu')}
+            className="flex h-11 items-center gap-2 rounded-full border border-ink/10 bg-white/70 px-4 text-[11px] font-medium uppercase tracking-[0.22em] text-ink backdrop-blur transition-colors hover:bg-cream-100"
+          >
+            <Menu size={16} strokeWidth={1.75} aria-hidden="true" />
+            <span>{t('menu')}</span>
+          </button>
+        </div>
 
-        <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">
-          {NAV.map((item) => (
-            <Link
-              key={item.id}
-              href={`/#${item.id}`}
-              className="link-underline text-sm font-medium text-ink-soft transition-colors hover:text-honey-700"
-            >
-              {t(item.key)}
-            </Link>
-          ))}
-        </nav>
+        <div className="flex justify-center">
+          <Logo size="sm" />
+        </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center justify-end gap-2 sm:gap-3">
           <LanguageSwitcher />
+          <a
+            href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
+            className="hidden h-11 items-center rounded-full border border-ink/10 bg-white/70 px-4 text-[11px] font-medium uppercase tracking-[0.22em] text-ink backdrop-blur transition-colors hover:bg-cream-100 sm:inline-flex"
+          >
+            {t('contact')}
+          </a>
           <a
             href={siteConfig.altegio.bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-gold hidden text-xs md:inline-flex"
+            className="btn btn-gold h-11 !px-5 !py-0"
           >
             {t('book')}
           </a>
-          <button
-            type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-honey-200/70 bg-white/70 text-ink-soft lg:hidden"
-            onClick={() => setOpen(true)}
-            aria-label={t('menu')}
-          >
-            <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
-              <path d="M2 5h14M2 9h14M2 13h14" stroke="currentColor" strokeWidth="1.6" />
-            </svg>
-          </button>
         </div>
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-cream-50 lg:hidden animate-fade-in">
-          <div className="container-honey flex items-center justify-between py-4">
-            <Logo />
+        <div className="fixed inset-0 z-50 flex flex-col bg-white animate-fade-in">
+          <div className="container-honey flex items-center justify-between py-5">
+            <Logo size="sm" />
             <button
               type="button"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-honey-200/70 bg-white/70 text-ink-soft"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white/70 text-ink"
               onClick={() => setOpen(false)}
               aria-label={t('close')}
             >
-              <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
-                <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.6" />
-              </svg>
+              <X size={18} strokeWidth={1.75} aria-hidden="true" />
             </button>
           </div>
-          <nav className="container-honey flex flex-col gap-1 pt-8" aria-label="Mobile">
-            {NAV.map((item) => (
-              <Link
-                key={item.id}
-                href={`/#${item.id}`}
-                onClick={() => setOpen(false)}
-                className="border-b border-honey-100/60 py-4 font-display text-3xl text-ink hover:text-honey-700"
+          <nav className="container-honey flex flex-1 flex-col justify-center" aria-label="Primary">
+            <ul className="space-y-1">
+              {NAV.map((item) => (
+                <li key={item.id}>
+                  <Link
+                    href={`/#${item.id}`}
+                    onClick={() => setOpen(false)}
+                    className="block border-b border-honey-100/60 py-5 font-display text-4xl font-light tracking-tight text-ink transition-colors hover:text-honey-700 sm:text-5xl"
+                    style={{ fontVariationSettings: '"opsz" 144, "SOFT" 50' }}
+                  >
+                    {t(item.key)}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
+              <a
+                href={siteConfig.altegio.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-gold"
               >
-                {t(item.key)}
-              </Link>
-            ))}
-            <a
-              href={siteConfig.altegio.bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-gold mt-8 w-full"
-            >
-              {t('book')}
-            </a>
+                {t('book')}
+              </a>
+              <a
+                href={`https://wa.me/${siteConfig.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-outline"
+              >
+                WhatsApp
+              </a>
+            </div>
           </nav>
         </div>
       )}

@@ -45,7 +45,10 @@ const config: Config = {
       animation: {
         'fade-up': 'fadeUp 0.7s ease-out both',
         'fade-in': 'fadeIn 0.8s ease-out both',
-        shimmer: 'shimmer 2.5s linear infinite'
+        shimmer: 'shimmer 2.5s linear infinite',
+        'float-slow': 'floatSlow 6s ease-in-out infinite',
+        'float-med': 'floatMed 4.5s ease-in-out infinite',
+        'float-fast': 'floatFast 3.5s ease-in-out infinite'
       },
       keyframes: {
         fadeUp: {
@@ -59,6 +62,18 @@ const config: Config = {
         shimmer: {
           '0%': { backgroundPosition: '-200% 0' },
           '100%': { backgroundPosition: '200% 0' }
+        },
+        floatSlow: {
+          '0%, 100%': { transform: 'translateY(0px) rotate(-4deg)' },
+          '50%': { transform: 'translateY(-14px) rotate(4deg)' }
+        },
+        floatMed: {
+          '0%, 100%': { transform: 'translateY(0px) rotate(3deg)' },
+          '50%': { transform: 'translateY(-10px) rotate(-3deg)' }
+        },
+        floatFast: {
+          '0%, 100%': { transform: 'translateY(0px) scale(1)' },
+          '50%': { transform: 'translateY(-8px) scale(1.08)' }
         }
       }
     }

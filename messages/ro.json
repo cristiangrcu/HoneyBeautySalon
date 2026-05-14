@@ -29,9 +29,10 @@
     "ctaSecondary": "Vezi serviciile",
     "stats": {
       "clients": "1500+ cliente fericite",
-      "rating": "4.9 ★ pe Google",
+      "rating": "5.0 ★ pe Google",
       "experience": "5+ ani de experiență"
-    }
+    },
+    "socialLabel": "Urmărește"
   },
   "about": {
     "eyebrow": "Despre Honey",

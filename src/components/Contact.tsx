@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { siteConfig } from '@/config/site';
 
 export function Contact() {
@@ -15,7 +16,7 @@ export function Contact() {
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[1fr_1.2fr]">
           <div className="space-y-5">
-            <InfoRow icon={<PinIcon />} label={t('addressLabel')}>
+            <InfoRow icon={<MapPin size={18} strokeWidth={1.5} />} label={t('addressLabel')}>
               <a
                 href={siteConfig.address.googleMapsLink}
                 target="_blank"
@@ -28,19 +29,19 @@ export function Contact() {
               </a>
             </InfoRow>
 
-            <InfoRow icon={<PhoneIcon />} label={t('phoneLabel')}>
+            <InfoRow icon={<Phone size={18} strokeWidth={1.5} />} label={t('phoneLabel')}>
               <a href={`tel:${siteConfig.phone.replace(/\s/g, '')}`} className="link-underline">
                 {siteConfig.phoneDisplay}
               </a>
             </InfoRow>
 
-            <InfoRow icon={<MailIcon />} label={t('emailLabel')}>
+            <InfoRow icon={<Mail size={18} strokeWidth={1.5} />} label={t('emailLabel')}>
               <a href={`mailto:${siteConfig.email}`} className="link-underline">
                 {siteConfig.email}
               </a>
             </InfoRow>
 
-            <InfoRow icon={<ClockIcon />} label={t('hoursLabel')}>
+            <InfoRow icon={<Clock size={18} strokeWidth={1.5} />} label={t('hoursLabel')}>
               <ul className="space-y-1 text-sm">
                 <li className="flex justify-between gap-6">
                   <span>{t('hoursWeekdays')}</span>
@@ -108,48 +109,5 @@ function InfoRow({
         <div className="mt-1 text-ink">{children}</div>
       </div>
     </div>
-  );
-}
-
-function PinIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
-      <path
-        d="M9 16s-6-5-6-9a6 6 0 0 1 12 0c0 4-6 9-6 9Z"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        fill="none"
-      />
-      <circle cx="9" cy="7" r="2" stroke="currentColor" strokeWidth="1.4" fill="none" />
-    </svg>
-  );
-}
-function PhoneIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
-      <path
-        d="M3 4a1 1 0 0 1 1-1h2l1.5 4-2 1a9 9 0 0 0 4.5 4.5l1-2 4 1.5v2a1 1 0 0 1-1 1A12 12 0 0 1 3 4Z"
-        stroke="currentColor"
-        strokeWidth="1.4"
-        fill="none"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-function MailIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
-      <rect x="2.5" y="4" width="13" height="10" rx="1.5" stroke="currentColor" strokeWidth="1.4" fill="none" />
-      <path d="M3 5l6 5 6-5" stroke="currentColor" strokeWidth="1.4" fill="none" strokeLinejoin="round" />
-    </svg>
-  );
-}
-function ClockIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true">
-      <circle cx="9" cy="9" r="7" stroke="currentColor" strokeWidth="1.4" fill="none" />
-      <path d="M9 5v4l3 2" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" fill="none" />
-    </svg>
   );
 }

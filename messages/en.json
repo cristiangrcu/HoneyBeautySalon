@@ -29,9 +29,10 @@
     "ctaSecondary": "Explore services",
     "stats": {
       "clients": "1500+ happy clients",
-      "rating": "4.9 ★ on Google",
+      "rating": "5.0 ★ on Google",
       "experience": "5+ years of expertise"
-    }
+    },
+    "socialLabel": "Follow"
   },
   "about": {
     "eyebrow": "About Honey",

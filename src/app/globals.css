@@ -28,16 +28,16 @@ body {
   }
 
   .btn-gold {
-    background: linear-gradient(135deg, #F3DEA8 0%, #E2C281 55%, #C9A465 100%);
-    color: #2B1D0E;
-    box-shadow: 0 12px 32px -14px rgba(201, 164, 101, 0.45);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    background-color: #2B1D0E;
+    color: #FAF5E9;
+    box-shadow: 0 14px 36px -16px rgba(43, 29, 14, 0.38);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   }
 
   .btn-gold:hover {
+    background-color: #3B2A12;
     transform: translateY(-2px);
-    box-shadow: 0 18px 38px -14px rgba(201, 164, 101, 0.55);
-    filter: brightness(1.03);
+    box-shadow: 0 20px 44px -14px rgba(43, 29, 14, 0.48);
   }
 
   .btn-gold:active {

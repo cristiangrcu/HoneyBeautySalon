@@ -57,34 +57,87 @@
     "duration": "Durată",
     "book": "Rezervă",
     "viewAll": "Vezi toate serviciile",
+    "pageTitle": "Lista completă de servicii",
+    "pageSubtitle": "Toate serviciile noastre, cu prețuri și durate actualizate. Rezervă online prin Altegio sau scrie-ne pe WhatsApp.",
+    "categoryLabel": "Categorie",
+    "noteTitle": "Notă",
+    "noteText": "Prețurile pot varia în funcție de lungimea părului, designul ales sau produsele folosite. Pentru o ofertă personalizată, contactează-ne direct.",
+    "backHome": "Înapoi acasă",
     "items": {
       "manicure": {
         "title": "Manichiură",
-        "description": "Manichiură clasică, japoneză sau cu gel premium. Forme perfecte, design personalizat și o ținută impecabilă."
+        "description": "Manichiură clasică, japoneză sau cu gel premium. Forme perfecte, design personalizat și o ținută impecabilă.",
+        "subItems": {
+          "classic": "Manichiură clasică",
+          "japanese": "Manichiură japoneză",
+          "gel": "Manichiură cu gel",
+          "gelPolish": "Acoperire cu gel-lac",
+          "design": "Design individual (per unghie)"
+        }
       },
       "pedicure": {
         "title": "Pedichiură",
-        "description": "Pedichiură SPA cu îngrijire completă, exfoliere și acoperire de lungă durată — pentru picioare perfect îngrijite."
+        "description": "Pedichiură SPA cu îngrijire completă, exfoliere și acoperire de lungă durată — pentru picioare perfect îngrijite.",
+        "subItems": {
+          "classic": "Pedichiură clasică",
+          "spa": "Pedichiură SPA",
+          "gelPolish": "Pedichiură cu gel-lac",
+          "kids": "Pedichiură copii"
+        }
       },
       "lashes": {
         "title": "Extensii de gene",
-        "description": "Clasic, 2D, 3D sau efect mega-volum. Gene confortabile, naturale și rezistente, aplicate fir cu fir."
+        "description": "Clasic, 2D, 3D sau efect mega-volum. Gene confortabile, naturale și rezistente, aplicate fir cu fir.",
+        "subItems": {
+          "classic": "Extensii clasice 1D",
+          "volume2D": "Volum 2D",
+          "volume3D": "Volum 3D",
+          "mega": "Mega-volum",
+          "fill": "Corectare (până la 3 săptămâni)"
+        }
       },
       "brows": {
         "title": "Design sprâncene",
-        "description": "Arhitectură sprâncene, vopsit cu henna sau vopsea, laminare — privirea ta, accentuată cu finețe."
-      },
-      "makeup": {
-        "title": "Machiaj",
-        "description": "Machiaj de zi, de seară sau pentru evenimente speciale. Tehnici moderne și produse de lungă durată."
+        "description": "Arhitectură sprâncene, vopsit cu henna sau vopsea, laminare — privirea ta, accentuată cu finețe.",
+        "subItems": {
+          "architecture": "Arhitectură sprâncene",
+          "henna": "Vopsit cu henna",
+          "paint": "Vopsit cu vopsea",
+          "lamination": "Laminare sprâncene"
+        }
       },
       "hair": {
         "title": "Coafură & Păr",
-        "description": "Tunsori, coafuri, vopsit și tratamente. Părul tău, în mâinile celor mai bune stiliste."
+        "description": "Tunsori, coafuri, vopsit și tratamente. Părul tău, în mâinile celor mai bune stiliste.",
+        "subItems": {
+          "cut": "Tunsoare femei",
+          "styling": "Coafură simplă",
+          "event": "Coafură pentru evenimente",
+          "colorSingle": "Vopsit într-o nuanță",
+          "balayage": "Balayage / Ombre",
+          "keratin": "Tratament cheratină"
+        }
+      },
+      "makeup": {
+        "title": "Machiaj",
+        "description": "Machiaj de zi, de seară sau pentru evenimente speciale. Tehnici moderne și produse de lungă durată.",
+        "subItems": {
+          "day": "Machiaj de zi",
+          "evening": "Machiaj de seară",
+          "bridal": "Machiaj de mireasă",
+          "lesson": "Lecție individuală de machiaj"
+        }
       },
       "barber": {
         "title": "Tunsoare bărbați",
-        "description": "Tunsori clasice și moderne, fade, conturare barbă și ritualuri de bărbierit — bărbații merită și ei o pauză de stil."
+        "description": "Tunsori clasice și moderne, fade, conturare barbă și ritualuri de bărbierit — bărbații merită și ei o pauză de stil.",
+        "subItems": {
+          "classic": "Tunsoare clasică",
+          "beard": "Tunsoare + barbă",
+          "beardOnly": "Conturare barbă",
+          "razor": "Bărbierit cu brici",
+          "kids": "Tunsoare copii"
+        }
       }
     }
   },

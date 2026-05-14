@@ -64,28 +64,54 @@ export type ServiceKey =
   | 'makeup'
   | 'barber';
 
+export interface SubService {
+  key: string;
+  priceFrom: number;
+  duration: string;
+}
+
 export interface ServiceItem {
   key: ServiceKey;
   priceFrom: number;
   currency: 'MDL';
   image: string;
   duration: string;
+  subServices: SubService[];
 }
 
+/**
+ * Service catalog with sub-services (full menu).
+ * Sub-service keys are translated in messages/<locale>.json under
+ * services.items.<service>.subItems.<sub>.name.
+ * Prices below are reasonable placeholders — replace with your real menu.
+ */
 export const services: ServiceItem[] = [
   {
     key: 'manicure',
     priceFrom: 350,
     currency: 'MDL',
     duration: '60–90 min',
-    image: '/photos/service-manicure.jpg'
+    image: '/photos/service-manicure.jpg',
+    subServices: [
+      { key: 'classic', priceFrom: 350, duration: '60 min' },
+      { key: 'japanese', priceFrom: 400, duration: '75 min' },
+      { key: 'gel', priceFrom: 500, duration: '90 min' },
+      { key: 'gelPolish', priceFrom: 300, duration: '45 min' },
+      { key: 'design', priceFrom: 50, duration: '+15 min' }
+    ]
   },
   {
     key: 'pedicure',
     priceFrom: 450,
     currency: 'MDL',
     duration: '75–90 min',
-    image: '/photos/service-pedicure.jpg'
+    image: '/photos/service-pedicure.jpg',
+    subServices: [
+      { key: 'classic', priceFrom: 450, duration: '75 min' },
+      { key: 'spa', priceFrom: 550, duration: '90 min' },
+      { key: 'gelPolish', priceFrom: 600, duration: '90 min' },
+      { key: 'kids', priceFrom: 250, duration: '45 min' }
+    ]
   },
   {
     key: 'lashes',
@@ -93,7 +119,14 @@ export const services: ServiceItem[] = [
     currency: 'MDL',
     duration: '90–150 min',
     image:
-      'https://images.unsplash.com/photo-1583241800698-9c2e30a4f3f8?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1583241800698-9c2e30a4f3f8?auto=format&fit=crop&w=1200&q=80',
+    subServices: [
+      { key: 'classic', priceFrom: 500, duration: '90 min' },
+      { key: 'volume2D', priceFrom: 700, duration: '120 min' },
+      { key: 'volume3D', priceFrom: 800, duration: '130 min' },
+      { key: 'mega', priceFrom: 900, duration: '150 min' },
+      { key: 'fill', priceFrom: 350, duration: '60 min' }
+    ]
   },
   {
     key: 'brows',
@@ -101,28 +134,55 @@ export const services: ServiceItem[] = [
     currency: 'MDL',
     duration: '45 min',
     image:
-      'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=80'
+      'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=80',
+    subServices: [
+      { key: 'architecture', priceFrom: 250, duration: '30 min' },
+      { key: 'henna', priceFrom: 300, duration: '45 min' },
+      { key: 'paint', priceFrom: 250, duration: '30 min' },
+      { key: 'lamination', priceFrom: 450, duration: '60 min' }
+    ]
   },
   {
     key: 'hair',
     priceFrom: 400,
     currency: 'MDL',
     duration: '60–120 min',
-    image: '/photos/service-hair-balayage.jpg'
+    image: '/photos/service-hair-balayage.jpg',
+    subServices: [
+      { key: 'cut', priceFrom: 400, duration: '60 min' },
+      { key: 'styling', priceFrom: 450, duration: '60 min' },
+      { key: 'event', priceFrom: 700, duration: '90 min' },
+      { key: 'colorSingle', priceFrom: 700, duration: '120 min' },
+      { key: 'balayage', priceFrom: 1200, duration: '180 min' },
+      { key: 'keratin', priceFrom: 1500, duration: '180 min' }
+    ]
   },
   {
     key: 'makeup',
     priceFrom: 600,
     currency: 'MDL',
     duration: '60 min',
-    image: '/photos/service-makeup.jpg'
+    image: '/photos/service-makeup.jpg',
+    subServices: [
+      { key: 'day', priceFrom: 600, duration: '60 min' },
+      { key: 'evening', priceFrom: 800, duration: '75 min' },
+      { key: 'bridal', priceFrom: 1500, duration: '90 min' },
+      { key: 'lesson', priceFrom: 1000, duration: '120 min' }
+    ]
   },
   {
     key: 'barber',
     priceFrom: 250,
     currency: 'MDL',
     duration: '45–60 min',
-    image: '/photos/service-barber-honey.jpg'
+    image: '/photos/service-barber-honey.jpg',
+    subServices: [
+      { key: 'classic', priceFrom: 250, duration: '45 min' },
+      { key: 'beard', priceFrom: 350, duration: '60 min' },
+      { key: 'beardOnly', priceFrom: 200, duration: '30 min' },
+      { key: 'razor', priceFrom: 250, duration: '30 min' },
+      { key: 'kids', priceFrom: 200, duration: '40 min' }
+    ]
   }
 ];
 

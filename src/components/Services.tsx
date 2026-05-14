@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
 import { services, siteConfig } from '@/config/site';
 
 export function Services() {
@@ -61,14 +62,9 @@ export function Services() {
         </div>
 
         <div className="mt-12 text-center">
-          <a
-            href={siteConfig.altegio.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-gold"
-          >
+          <Link href="/services" className="btn btn-gold">
             {t('viewAll')}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

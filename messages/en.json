@@ -57,34 +57,87 @@
     "duration": "Duration",
     "book": "Book",
     "viewAll": "See all services",
+    "pageTitle": "Full price list",
+    "pageSubtitle": "All our services with up-to-date prices and durations. Book online via Altegio or message us on WhatsApp.",
+    "categoryLabel": "Category",
+    "noteTitle": "Note",
+    "noteText": "Prices may vary based on hair length, chosen design, or products used. For a personalised quote, contact us directly.",
+    "backHome": "Back to home",
     "items": {
       "manicure": {
         "title": "Manicure",
-        "description": "Classic, Japanese or premium gel manicure. Perfect shapes, custom design and an impeccable finish."
+        "description": "Classic, Japanese or premium gel manicure. Perfect shapes, custom design and an impeccable finish.",
+        "subItems": {
+          "classic": "Classic manicure",
+          "japanese": "Japanese manicure",
+          "gel": "Gel manicure",
+          "gelPolish": "Gel polish only",
+          "design": "Custom nail art (per nail)"
+        }
       },
       "pedicure": {
         "title": "Pedicure",
-        "description": "SPA pedicure with full care, exfoliation and long-lasting finish — for perfectly groomed feet."
+        "description": "SPA pedicure with full care, exfoliation and long-lasting finish — for perfectly groomed feet.",
+        "subItems": {
+          "classic": "Classic pedicure",
+          "spa": "SPA pedicure",
+          "gelPolish": "Pedicure with gel polish",
+          "kids": "Kids pedicure"
+        }
       },
       "lashes": {
         "title": "Lash extensions",
-        "description": "Classic, 2D, 3D or mega-volume. Comfortable, natural and long-lasting lashes, applied one by one."
+        "description": "Classic, 2D, 3D or mega-volume. Comfortable, natural and long-lasting lashes, applied one by one.",
+        "subItems": {
+          "classic": "Classic 1D",
+          "volume2D": "Volume 2D",
+          "volume3D": "Volume 3D",
+          "mega": "Mega volume",
+          "fill": "Refill (up to 3 weeks)"
+        }
       },
       "brows": {
         "title": "Brow design",
-        "description": "Brow architecture, henna or paint tinting, lamination — your gaze, gently enhanced."
-      },
-      "makeup": {
-        "title": "Makeup",
-        "description": "Day, evening or event makeup. Modern techniques and long-wear products."
+        "description": "Brow architecture, henna or paint tinting, lamination — your gaze, gently enhanced.",
+        "subItems": {
+          "architecture": "Brow architecture",
+          "henna": "Henna tinting",
+          "paint": "Paint tinting",
+          "lamination": "Brow lamination"
+        }
       },
       "hair": {
         "title": "Hair styling",
-        "description": "Cuts, styling, colouring and treatments. Your hair, in the hands of the best stylists."
+        "description": "Cuts, styling, colouring and treatments. Your hair, in the hands of the best stylists.",
+        "subItems": {
+          "cut": "Women's haircut",
+          "styling": "Simple blowout",
+          "event": "Event styling",
+          "colorSingle": "Single-tone colouring",
+          "balayage": "Balayage / Ombre",
+          "keratin": "Keratin treatment"
+        }
+      },
+      "makeup": {
+        "title": "Makeup",
+        "description": "Day, evening or event makeup. Modern techniques and long-wear products.",
+        "subItems": {
+          "day": "Day makeup",
+          "evening": "Evening makeup",
+          "bridal": "Bridal makeup",
+          "lesson": "Individual makeup lesson"
+        }
       },
       "barber": {
         "title": "Men's barbering",
-        "description": "Classic and modern cuts, fades, beard shaping and shaving rituals — men deserve a moment of style too."
+        "description": "Classic and modern cuts, fades, beard shaping and shaving rituals — men deserve a moment of style too.",
+        "subItems": {
+          "classic": "Classic haircut",
+          "beard": "Haircut + beard",
+          "beardOnly": "Beard shaping",
+          "razor": "Razor shave",
+          "kids": "Kids haircut"
+        }
       }
     }
   },

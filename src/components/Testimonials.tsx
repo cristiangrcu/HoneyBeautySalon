@@ -2,13 +2,14 @@ import { useTranslations } from 'next-intl';
 import { Star, PencilLine } from 'lucide-react';
 import { googleReviews, siteConfig } from '@/config/site';
 import { SmartImage } from './SmartImage';
+import { AppleEmoji } from './AppleEmoji';
 
 const FLOATING_EMOJIS = [
-  { emoji: '💛', className: 'left-[6%] top-[18%] text-3xl sm:text-4xl animate-float-slow', delay: '0s' },
-  { emoji: '✨', className: 'right-[8%] top-[12%] text-2xl sm:text-3xl animate-float-med', delay: '0.8s' },
-  { emoji: '❤️', className: 'left-[12%] bottom-[14%] text-2xl sm:text-3xl animate-float-med', delay: '1.4s' },
-  { emoji: '👍', className: 'right-[10%] bottom-[20%] text-3xl sm:text-4xl animate-float-slow', delay: '0.4s' },
-  { emoji: '🌟', className: 'left-1/2 top-[8%] text-xl sm:text-2xl animate-float-fast', delay: '1.2s' }
+  { name: 'heart-eyes', fallback: '😍', size: 44, position: 'left-[5%] top-[14%]', anim: 'animate-float-slow', delay: '0s' },
+  { name: 'sparkles', fallback: '✨', size: 36, position: 'right-[7%] top-[10%]', anim: 'animate-float-med', delay: '0.8s' },
+  { name: 'heart', fallback: '❤️', size: 32, position: 'left-[10%] bottom-[12%]', anim: 'animate-float-med', delay: '1.4s' },
+  { name: 'thumbs-up', fallback: '👍', size: 44, position: 'right-[8%] bottom-[16%]', anim: 'animate-float-slow', delay: '0.4s' },
+  { name: 'glowing-star', fallback: '🌟', size: 28, position: 'left-[50%] top-[6%]', anim: 'animate-float-fast', delay: '1.2s' }
 ];
 
 export function Testimonials() {
@@ -18,13 +19,13 @@ export function Testimonials() {
     <section id="testimonials" className="relative overflow-hidden bg-white py-20 sm:py-28">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         {FLOATING_EMOJIS.map((item, i) => (
-          <span
+          <div
             key={i}
-            className={`absolute select-none opacity-50 ${item.className}`}
+            className={`absolute opacity-80 ${item.position} ${item.anim}`}
             style={{ animationDelay: item.delay }}
           >
-            {item.emoji}
-          </span>
+            <AppleEmoji name={item.name} fallback={item.fallback} size={item.size} />
+          </div>
         ))}
       </div>
 

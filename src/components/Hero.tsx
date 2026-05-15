@@ -15,70 +15,67 @@ export function Hero() {
     <section className="relative overflow-hidden bg-white pt-28 sm:pt-32">
       <div className="absolute inset-0 bg-honey-radial" aria-hidden="true" />
 
-      <div className="container-honey relative pb-16 sm:pb-24">
-        <div className="grid items-start gap-2 lg:grid-cols-[auto_1fr_auto] lg:gap-12">
-          <p className="eyebrow mt-2 lg:mt-6">{t('eyebrow')}</p>
-          <div aria-hidden="true" />
-          <div className="hidden text-right text-[11px] uppercase tracking-[0.32em] text-ink-soft lg:block">
+      <div className="container-honey relative pb-12 sm:pb-20">
+        <div className="flex items-start justify-between gap-4">
+          <p className="eyebrow max-w-[55%]">{t('eyebrow')}</p>
+          <div className="hidden text-right text-[10px] uppercase tracking-[0.32em] text-ink-soft sm:block">
             <span className="block">Chișinău</span>
             <span className="mt-1 block text-honey-700">★ 5.0 Google</span>
           </div>
         </div>
 
-        <div className="relative mx-auto mt-10 max-w-5xl sm:mt-14">
-          <h1 className="text-balance text-center font-display font-light leading-[0.95] tracking-[-0.02em] text-ink"
-              style={{
-                fontSize: 'clamp(2.75rem, 11vw, 8.5rem)',
-                fontVariationSettings: '"opsz" 144, "SOFT" 50'
-              }}>
+        <div className="relative mx-auto mt-10 min-h-[440px] max-w-6xl sm:mt-14 sm:min-h-[560px] lg:min-h-[640px]">
+          <div className="absolute -left-[2%] top-[18%] z-10 aspect-[4/5] w-[30vw] max-w-[260px] -rotate-[4deg] overflow-hidden rounded-[1.5rem] shadow-[0_24px_60px_-20px_rgba(43,29,14,0.32)] ring-1 ring-black/5 sm:rounded-[2rem] lg:left-[2%]">
+            <Image
+              src="/photos/service-makeup.jpg"
+              alt=""
+              fill
+              priority
+              sizes="(max-width: 1024px) 30vw, 260px"
+              className="object-cover"
+            />
+          </div>
+
+          <div className="absolute -right-[2%] top-[6%] z-10 aspect-square w-[32vw] max-w-[280px] rotate-[3deg] overflow-hidden rounded-[1.5rem] shadow-[0_24px_60px_-20px_rgba(43,29,14,0.32)] ring-1 ring-black/5 sm:rounded-[2rem] lg:right-[2%]">
+            <Image
+              src="/photos/service-hair-balayage.jpg"
+              alt=""
+              fill
+              priority
+              sizes="(max-width: 1024px) 32vw, 280px"
+              className="object-cover"
+            />
+          </div>
+
+          <div className="absolute bottom-0 right-[10%] z-10 aspect-[3/4] w-[26vw] max-w-[220px] rotate-[2deg] overflow-hidden rounded-[1.5rem] shadow-[0_28px_64px_-20px_rgba(43,29,14,0.38)] ring-1 ring-black/5 sm:rounded-[2rem] lg:right-[14%]">
+            <Image
+              src="/photos/salon-hero.jpg"
+              alt=""
+              fill
+              priority
+              sizes="(max-width: 1024px) 26vw, 220px"
+              className="object-cover"
+            />
+          </div>
+
+          <h1
+            className="pointer-events-none relative z-30 text-balance pt-8 text-center font-display font-light leading-[0.92] tracking-[-0.02em] text-ink sm:pt-12"
+            style={{
+              fontSize: 'clamp(2.5rem, 12vw, 9rem)',
+              fontVariationSettings: '"opsz" 144, "SOFT" 50'
+            }}
+          >
             <span className="block">{before}</span>
             <span className="text-gold italic">{gold}</span>
             {after && <span className="block">{after}</span>}
           </h1>
-
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-            <div className="relative h-[60%] w-full max-w-[640px]">
-              <div className="pointer-events-auto absolute left-[8%] top-[-8%] aspect-square w-[36%] -rotate-[4deg] overflow-hidden rounded-[1.5rem] shadow-[0_24px_60px_-20px_rgba(43,29,14,0.35)] ring-1 ring-black/5 sm:rounded-[2rem]">
-                <Image
-                  src="/photos/service-makeup.jpg"
-                  alt=""
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 35vw, 220px"
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="pointer-events-auto absolute right-[6%] top-[18%] aspect-square w-[40%] rotate-[3deg] overflow-hidden rounded-[1.5rem] shadow-[0_24px_60px_-20px_rgba(43,29,14,0.35)] ring-1 ring-black/5 sm:rounded-[2rem]">
-                <Image
-                  src="/photos/service-hair-balayage.jpg"
-                  alt=""
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 40vw, 240px"
-                  className="object-cover"
-                />
-              </div>
-
-              <div className="pointer-events-auto absolute left-1/2 top-[55%] aspect-[3/4] w-[32%] -translate-x-1/2 rotate-[1.5deg] overflow-hidden rounded-[1.5rem] shadow-[0_30px_70px_-20px_rgba(43,29,14,0.4)] ring-1 ring-black/5 sm:rounded-[2rem]">
-                <Image
-                  src="/photos/salon-hero.jpg"
-                  alt=""
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 32vw, 200px"
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
         </div>
 
-        <p className="mx-auto mt-[28vw] max-w-xl text-center text-base leading-relaxed text-ink-soft sm:mt-44 sm:text-lg">
+        <p className="mx-auto mt-2 max-w-xl text-center text-base leading-relaxed text-ink-soft sm:mt-6 sm:text-lg">
           {t('subtitle')}
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+        <div className="relative z-30 mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <a
             href={siteConfig.altegio.bookingUrl}
             target="_blank"

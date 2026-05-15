@@ -39,14 +39,14 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
         onClick={() => setOpen((v) => !v)}
         aria-label={t('label')}
         aria-expanded={open}
-        className={`flex items-center gap-1.5 rounded-full border border-honey-200/70 bg-white/70 px-3 py-2 text-xs font-medium uppercase tracking-[0.18em] text-ink-soft backdrop-blur transition-colors hover:border-honey-400 hover:text-honey-700 ${
+        className={`flex items-center gap-1.5 rounded-full border border-honey-200/70 bg-white/70 px-2.5 py-2 text-xs font-medium uppercase tracking-[0.18em] text-ink-soft backdrop-blur transition-colors hover:border-honey-400 hover:text-honey-700 sm:px-3 ${
           compact ? 'px-2.5' : ''
         }`}
       >
         <span aria-hidden="true" className="text-base leading-none">
           {FLAGS[locale]}
         </span>
-        <span>{locale.toUpperCase()}</span>
+        <span className="hidden sm:inline">{locale.toUpperCase()}</span>
         <svg
           aria-hidden="true"
           width="10"

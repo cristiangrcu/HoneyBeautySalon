@@ -15,7 +15,7 @@ export function Testimonials() {
   const t = useTranslations('testimonials');
 
   return (
-    <section id="testimonials" className="relative overflow-hidden bg-white py-20 sm:py-28">
+    <section id="testimonials" className="relative overflow-hidden bg-white py-16 sm:py-28">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         {FLOATING_EMOJIS.map((item, i) => (
           <span
@@ -64,25 +64,25 @@ export function Testimonials() {
           </div>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:mt-14 sm:gap-6 md:grid-cols-3">
           {googleReviews.map((item) => (
             <figure
               key={item.key}
-              className="group relative flex flex-col rounded-3xl border border-honey-100 bg-white p-7 shadow-soft transition-transform duration-300 hover:-translate-y-1"
+              className="group relative flex flex-col rounded-2xl border border-honey-100 bg-white p-5 shadow-soft transition-transform duration-300 hover:-translate-y-1 sm:rounded-3xl sm:p-7"
             >
-              <div className="absolute right-6 top-6 flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-soft ring-1 ring-honey-100">
-                <GoogleIcon className="h-5 w-5" />
+              <div className="absolute right-4 top-4 flex h-7 w-7 items-center justify-center rounded-full bg-white shadow-soft ring-1 ring-honey-100 sm:right-6 sm:top-6 sm:h-9 sm:w-9">
+                <GoogleIcon className="h-4 w-4 sm:h-5 sm:w-5" />
               </div>
-              <div className="mb-4 flex gap-0.5 text-honey-500">
+              <div className="mb-3 flex gap-0.5 text-honey-500 sm:mb-4">
                 {Array.from({ length: item.rating }).map((_, i) => (
-                  <Star key={i} size={16} fill="currentColor" strokeWidth={0} />
+                  <Star key={i} size={14} fill="currentColor" strokeWidth={0} className="sm:h-4 sm:w-4" />
                 ))}
               </div>
-              <blockquote className="flex-1 font-display text-lg leading-relaxed text-ink">
+              <blockquote className="flex-1 font-display text-sm leading-relaxed text-ink sm:text-lg">
                 “{t(`items.${item.key}.text`)}”
               </blockquote>
-              <figcaption className="mt-6 flex items-center gap-3 border-t border-honey-100 pt-5">
-                <div className="relative h-12 w-12 overflow-hidden rounded-full ring-2 ring-honey-200">
+              <figcaption className="mt-4 flex items-center gap-3 border-t border-honey-100 pt-4 sm:mt-6 sm:pt-5">
+                <div className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-honey-200 sm:h-12 sm:w-12">
                   <SmartImage
                     src={item.image}
                     fallback={item.fallbackImage}
@@ -93,8 +93,10 @@ export function Testimonials() {
                   />
                 </div>
                 <div>
-                  <div className="font-medium text-ink">{t(`items.${item.key}.name`)}</div>
-                  <div className="text-xs uppercase tracking-[0.18em] text-honey-700">
+                  <div className="text-sm font-medium text-ink sm:text-base">
+                    {t(`items.${item.key}.name`)}
+                  </div>
+                  <div className="text-[10px] uppercase tracking-[0.18em] text-honey-700 sm:text-xs">
                     {t(`items.${item.key}.service`)}
                   </div>
                 </div>

@@ -6,20 +6,20 @@ export function Gallery() {
   const t = useTranslations('gallery');
 
   return (
-    <section id="gallery" className="section bg-cream-50">
+    <section id="gallery" className="bg-cream-50 py-16 sm:py-28">
       <div className="container-honey">
         <div className="mx-auto max-w-2xl text-center">
           <p className="eyebrow justify-center">{t('eyebrow')}</p>
           <h2 className="mt-6 display-title text-balance">{t('title')}</h2>
-          <p className="mt-5 text-lg text-ink-soft">{t('subtitle')}</p>
+          <p className="mt-4 text-sm leading-relaxed text-ink-soft sm:mt-5 sm:text-lg">{t('subtitle')}</p>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+        <div className="mt-10 grid grid-cols-2 gap-2.5 sm:mt-14 sm:gap-4 md:grid-cols-4">
           {galleryImages.map((src, i) => (
             <div
               key={src}
-              className={`relative overflow-hidden rounded-2xl shadow-soft ring-1 ring-honey-100 transition-transform duration-500 hover:-translate-y-1 ${
-                i % 5 === 0 ? 'md:row-span-2 aspect-[3/4] md:aspect-[3/4]' : 'aspect-square'
+              className={`relative aspect-square overflow-hidden rounded-2xl shadow-soft ring-1 ring-honey-100 transition-transform duration-500 hover:-translate-y-1 ${
+                i % 5 === 0 ? 'md:row-span-2 md:aspect-[3/4]' : ''
               }`}
             >
               <Image

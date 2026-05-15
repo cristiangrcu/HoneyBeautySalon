@@ -8,16 +8,16 @@ export function About() {
   const t = useTranslations('about');
 
   return (
-    <section id="about" className="section bg-cream-50">
-      <div className="container-honey grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
-        <div className="relative">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] shadow-soft ring-1 ring-honey-100">
+    <section id="about" className="bg-cream-50 py-16 sm:py-28">
+      <div className="container-honey grid gap-10 sm:gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+        <div className="relative mx-auto w-full max-w-[280px] sm:max-w-none">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] shadow-soft ring-1 ring-honey-100 sm:rounded-[2rem]">
             <SmartImage
               src={photos.about}
               fallback={photos.fallback.about}
               alt=""
               fill
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 640px) 280px, (max-width: 1024px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
@@ -36,24 +36,24 @@ export function About() {
         <div>
           <p className="eyebrow">{t('eyebrow')}</p>
           <h2 className="mt-6 display-title text-balance">{t('title')}</h2>
-          <p className="mt-6 text-lg leading-relaxed text-ink-soft">{t('p1')}</p>
-          <p className="mt-4 text-lg leading-relaxed text-ink-soft">{t('p2')}</p>
+          <p className="mt-5 text-sm leading-relaxed text-ink-soft sm:mt-6 sm:text-lg">{t('p1')}</p>
+          <p className="mt-3 text-sm leading-relaxed text-ink-soft sm:mt-4 sm:text-lg">{t('p2')}</p>
 
-          <ul className="mt-10 grid gap-4 sm:grid-cols-2">
+          <ul className="mt-8 grid grid-cols-2 gap-2.5 sm:mt-10 sm:gap-4">
             {HIGHLIGHTS.map((key) => (
               <li
                 key={key}
-                className="rounded-2xl border border-honey-100 bg-white/70 p-5 transition-colors hover:border-honey-300"
+                className="rounded-2xl border border-honey-100 bg-white/70 p-3 transition-colors hover:border-honey-300 sm:p-5"
               >
-                <div className="flex items-start gap-3">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-honey-50 text-honey-700">
+                <div className="flex items-start gap-2 sm:gap-3">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-honey-50 text-honey-700 sm:h-9 sm:w-9">
                     <DotIcon />
                   </span>
                   <div>
-                    <div className="font-display text-lg font-semibold text-ink">
+                    <div className="font-display text-sm font-semibold leading-tight text-ink sm:text-lg">
                       {t(`highlights.${key}`)}
                     </div>
-                    <p className="mt-1 text-sm leading-relaxed text-ink-soft">
+                    <p className="mt-1 hidden text-sm leading-relaxed text-ink-soft sm:block">
                       {t(`highlights.${key}Desc`)}
                     </p>
                   </div>

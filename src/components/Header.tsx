@@ -46,6 +46,9 @@ export function Header() {
     }, CLOSE_DURATION);
   };
 
+  const bookText = t('book');
+  const bookShort = bookText.split(' ')[0];
+
   return (
     <header
       className={`fixed top-0 z-40 w-full transition-all duration-300 ${
@@ -54,25 +57,25 @@ export function Header() {
           : 'bg-transparent'
       }`}
     >
-      <div className="container-honey grid grid-cols-[auto_1fr_auto] items-center gap-2 py-3 sm:grid-cols-[1fr_auto_1fr] sm:py-5">
-        <div className="flex justify-start">
-          <button
-            type="button"
-            onClick={() => setOpen(true)}
-            aria-label={t('menu')}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/10 bg-white/70 text-ink backdrop-blur transition-colors hover:bg-cream-100 sm:h-11 sm:w-auto sm:gap-2 sm:px-4 sm:text-[11px] sm:font-medium sm:uppercase sm:tracking-[0.22em]"
-          >
-            <Menu size={16} strokeWidth={1.75} aria-hidden="true" />
-            <span className="hidden sm:inline">{t('menu')}</span>
-          </button>
-        </div>
+      <div className="container-honey relative flex items-center justify-between gap-3 py-3 sm:py-5">
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          aria-label={t('menu')}
+          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-ink/10 bg-white/70 text-ink backdrop-blur transition-colors hover:bg-cream-100 sm:h-11 sm:w-auto sm:gap-2 sm:px-4 sm:text-[11px] sm:font-medium sm:uppercase sm:tracking-[0.22em]"
+        >
+          <Menu size={16} strokeWidth={1.75} aria-hidden="true" />
+          <span className="hidden sm:inline">{t('menu')}</span>
+        </button>
 
-        <div className="flex justify-center">
-          <Logo size="sm" />
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <Logo size="sm" align="center" />
         </div>
 
         <div className="flex items-center justify-end gap-1.5 sm:gap-3">
-          <LanguageSwitcher />
+          <div className="hidden sm:block">
+            <LanguageSwitcher />
+          </div>
           <Link
             href="/#contact"
             className="hidden h-11 items-center rounded-full border border-ink/10 bg-white/70 px-4 text-[11px] font-medium uppercase tracking-[0.22em] text-ink backdrop-blur transition-colors hover:bg-cream-100 sm:inline-flex"
@@ -83,9 +86,10 @@ export function Header() {
             href={siteConfig.altegio.bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-gold h-10 !px-3.5 !py-0 text-[10px] sm:h-11 sm:!px-5 sm:text-[11px]"
+            className="btn btn-gold h-10 shrink-0 !gap-0 !px-3.5 !py-0 !text-[10px] !tracking-[0.14em] sm:h-11 sm:!px-5 sm:!text-[11px] sm:!tracking-[0.22em]"
           >
-            {t('book')}
+            <span className="sm:hidden">{bookShort}</span>
+            <span className="hidden sm:inline">{bookText}</span>
           </a>
         </div>
       </div>
@@ -96,8 +100,13 @@ export function Header() {
             closing ? 'animate-fade-out' : 'animate-fade-in'
           }`}
         >
-          <div className="container-honey flex items-center justify-between py-5">
-            <Logo size="sm" />
+          <div className="container-honey flex items-center justify-between py-4 sm:py-5">
+            <div className="flex items-center gap-3">
+              <Logo size="sm" />
+              <div className="sm:hidden">
+                <LanguageSwitcher />
+              </div>
+            </div>
             <button
               type="button"
               className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white/70 text-ink transition-colors hover:bg-cream-100"
@@ -138,7 +147,7 @@ export function Header() {
                 rel="noopener noreferrer"
                 className="btn btn-gold"
               >
-                {t('book')}
+                {bookText}
               </a>
               <a
                 href={`https://wa.me/${siteConfig.whatsapp}`}

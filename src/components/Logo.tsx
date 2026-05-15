@@ -7,23 +7,28 @@ import { Link } from '@/i18n/routing';
  */
 export function Logo({
   inverted = false,
-  size = 'sm'
+  size = 'sm',
+  align = 'start'
 }: {
   inverted?: boolean;
   size?: 'sm' | 'lg';
+  align?: 'start' | 'center';
 }) {
   const titleSize =
     size === 'lg'
       ? 'text-4xl sm:text-5xl tracking-[0.32em]'
-      : 'text-2xl tracking-[0.28em]';
+      : 'text-base tracking-[0.2em] sm:text-2xl sm:tracking-[0.28em]';
   const subSize =
-    size === 'lg' ? 'text-[11px] tracking-[0.5em]' : 'text-[8px] tracking-[0.42em]';
+    size === 'lg'
+      ? 'text-[11px] tracking-[0.5em]'
+      : 'text-[6px] tracking-[0.3em] sm:text-[8px] sm:tracking-[0.42em]';
+  const alignClass = align === 'center' ? 'items-center' : 'items-start';
 
   return (
     <Link
       href="/"
       aria-label="Honey Beauty Salon"
-      className="group inline-flex flex-col items-start leading-none"
+      className={`group inline-flex flex-col leading-none ${alignClass}`}
     >
       <span
         className={`font-display font-light uppercase ${titleSize} transition-colors ${

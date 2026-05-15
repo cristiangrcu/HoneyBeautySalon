@@ -49,43 +49,58 @@ export function Hero() {
           </h1>
 
           <div
-            className="mt-8 flex items-center justify-center gap-3 px-2 animate-fade-up"
+            className="mt-8 flex items-start justify-center gap-3 px-2 animate-fade-up"
             style={{ animationDelay: '0.3s' }}
           >
-            <div className="aspect-[4/5] w-[28%] -rotate-[6deg] overflow-hidden rounded-2xl shadow-[0_18px_44px_-18px_rgba(43,29,14,0.32)] ring-1 ring-black/5">
-              <div className="relative h-full w-full">
-                <Image
-                  src="/photos/service-makeup.jpg"
-                  alt=""
-                  fill
-                  priority
-                  sizes="35vw"
-                  className="object-cover"
-                />
+            <div
+              className="w-[28%] animate-float-gentle"
+              style={{ animationDelay: '0s' }}
+            >
+              <div className="aspect-[4/5] -rotate-[6deg] overflow-hidden rounded-2xl shadow-[0_18px_44px_-18px_rgba(43,29,14,0.32)] ring-1 ring-black/5">
+                <div className="relative h-full w-full">
+                  <Image
+                    src="/photos/service-makeup.jpg"
+                    alt=""
+                    fill
+                    priority
+                    sizes="35vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
-            <div className="-mt-3 aspect-square w-[34%] rotate-[3deg] overflow-hidden rounded-2xl shadow-[0_18px_44px_-18px_rgba(43,29,14,0.32)] ring-1 ring-black/5">
-              <div className="relative h-full w-full">
-                <Image
-                  src="/photos/service-hair-balayage.jpg"
-                  alt=""
-                  fill
-                  priority
-                  sizes="40vw"
-                  className="object-cover"
-                />
+            <div
+              className="-mt-3 w-[34%] animate-float-gentle"
+              style={{ animationDelay: '2s' }}
+            >
+              <div className="aspect-square rotate-[3deg] overflow-hidden rounded-2xl shadow-[0_18px_44px_-18px_rgba(43,29,14,0.32)] ring-1 ring-black/5">
+                <div className="relative h-full w-full">
+                  <Image
+                    src="/photos/service-hair-balayage.jpg"
+                    alt=""
+                    fill
+                    priority
+                    sizes="40vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
-            <div className="mt-4 aspect-[3/4] w-[24%] rotate-[4deg] overflow-hidden rounded-2xl shadow-[0_18px_44px_-18px_rgba(43,29,14,0.32)] ring-1 ring-black/5">
-              <div className="relative h-full w-full">
-                <Image
-                  src="/photos/salon-hero.jpg"
-                  alt=""
-                  fill
-                  priority
-                  sizes="30vw"
-                  className="object-cover"
-                />
+            <div
+              className="mt-4 w-[24%] animate-float-gentle"
+              style={{ animationDelay: '4s' }}
+            >
+              <div className="aspect-[3/4] rotate-[4deg] overflow-hidden rounded-2xl shadow-[0_18px_44px_-18px_rgba(43,29,14,0.32)] ring-1 ring-black/5">
+                <div className="relative h-full w-full">
+                  <Image
+                    src="/photos/salon-hero.jpg"
+                    alt=""
+                    fill
+                    priority
+                    sizes="30vw"
+                    className="object-cover"
+                  />
+                </div>
               </div>
             </div>
           </div>

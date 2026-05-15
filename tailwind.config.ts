@@ -44,11 +44,13 @@ const config: Config = {
       },
       animation: {
         'fade-up': 'fadeUp 0.7s ease-out both',
-        'fade-in': 'fadeIn 0.8s ease-out both',
+        'fade-in': 'fadeIn 0.3s ease-out both',
+        'fade-out': 'fadeOut 0.3s ease-out forwards',
         shimmer: 'shimmer 2.5s linear infinite',
         'float-slow': 'floatSlow 6s ease-in-out infinite',
         'float-med': 'floatMed 4.5s ease-in-out infinite',
-        'float-fast': 'floatFast 3.5s ease-in-out infinite'
+        'float-fast': 'floatFast 3.5s ease-in-out infinite',
+        'float-gentle': 'floatGentle 7s ease-in-out infinite'
       },
       keyframes: {
         fadeUp: {
@@ -58,6 +60,10 @@ const config: Config = {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' }
+        },
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' }
         },
         shimmer: {
           '0%': { backgroundPosition: '-200% 0' },
@@ -74,6 +80,10 @@ const config: Config = {
         floatFast: {
           '0%, 100%': { transform: 'translateY(0px) scale(1)' },
           '50%': { transform: 'translateY(-8px) scale(1.08)' }
+        },
+        floatGentle: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-12px)' }
         }
       }
     }

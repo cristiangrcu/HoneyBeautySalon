@@ -16,10 +16,13 @@ const NAV = [
   { id: 'contact', key: 'contact' }
 ] as const;
 
+const CLOSE_DURATION = 280;
+
 export function Header() {
   const t = useTranslations('nav');
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 16);
@@ -34,6 +37,14 @@ export function Header() {
       document.body.style.overflow = '';
     };
   }, [open]);
+
+  const closeDrawer = () => {
+    setClosing(true);
+    setTimeout(() => {
+      setOpen(false);
+      setClosing(false);
+    }, CLOSE_DURATION);
+  };
 
   return (
     <header
@@ -62,12 +73,12 @@ export function Header() {
 
         <div className="flex items-center justify-end gap-2 sm:gap-3">
           <LanguageSwitcher />
-          <a
-            href={`tel:${siteConfig.phone.replace(/\s/g, '')}`}
+          <Link
+            href="/#contact"
             className="hidden h-11 items-center rounded-full border border-ink/10 bg-white/70 px-4 text-[11px] font-medium uppercase tracking-[0.22em] text-ink backdrop-blur transition-colors hover:bg-cream-100 sm:inline-flex"
           >
             {t('contact')}
-          </a>
+          </Link>
           <a
             href={siteConfig.altegio.bookingUrl}
             target="_blank"
@@ -80,13 +91,17 @@ export function Header() {
       </div>
 
       {open && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-white animate-fade-in">
+        <div
+          className={`fixed inset-0 z-50 flex flex-col bg-white ${
+            closing ? 'animate-fade-out' : 'animate-fade-in'
+          }`}
+        >
           <div className="container-honey flex items-center justify-between py-5">
             <Logo size="sm" />
             <button
               type="button"
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white/70 text-ink"
-              onClick={() => setOpen(false)}
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-ink/10 bg-white/70 text-ink transition-colors hover:bg-cream-100"
+              onClick={closeDrawer}
               aria-label={t('close')}
             >
               <X size={18} strokeWidth={1.75} aria-hidden="true" />
@@ -94,11 +109,15 @@ export function Header() {
           </div>
           <nav className="container-honey flex flex-1 flex-col justify-center" aria-label="Primary">
             <ul className="space-y-1">
-              {NAV.map((item) => (
-                <li key={item.id}>
+              {NAV.map((item, i) => (
+                <li
+                  key={item.id}
+                  className={closing ? '' : 'animate-fade-up'}
+                  style={closing ? undefined : { animationDelay: `${0.05 + i * 0.06}s` }}
+                >
                   <Link
                     href={`/#${item.id}`}
-                    onClick={() => setOpen(false)}
+                    onClick={closeDrawer}
                     className="block border-b border-honey-100/60 py-5 font-display text-4xl font-light tracking-tight text-ink transition-colors hover:text-honey-700 sm:text-5xl"
                     style={{ fontVariationSettings: '"opsz" 144, "SOFT" 50' }}
                   >
@@ -107,7 +126,12 @@ export function Header() {
                 </li>
               ))}
             </ul>
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
+            <div
+              className={`mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4 ${
+                closing ? '' : 'animate-fade-up'
+              }`}
+              style={closing ? undefined : { animationDelay: `${0.05 + NAV.length * 0.06}s` }}
+            >
               <a
                 href={siteConfig.altegio.bookingUrl}
                 target="_blank"

@@ -24,44 +24,44 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative mx-auto mt-10 min-h-[440px] max-w-6xl sm:mt-14 sm:min-h-[560px] lg:min-h-[640px]">
-          <div className="absolute -left-[2%] top-[18%] z-10 aspect-[4/5] w-[30vw] max-w-[260px] -rotate-[4deg] overflow-hidden rounded-[1.5rem] shadow-[0_24px_60px_-20px_rgba(43,29,14,0.32)] ring-1 ring-black/5 sm:rounded-[2rem] lg:left-[2%]">
+        <div className="relative mx-auto mt-10 min-h-[460px] max-w-7xl sm:mt-14 sm:min-h-[560px] lg:min-h-[640px]">
+          <div className="absolute left-0 top-[20%] z-10 aspect-[4/5] w-[22vw] max-w-[200px] -rotate-[5deg] overflow-hidden rounded-[1.5rem] shadow-[0_24px_60px_-20px_rgba(43,29,14,0.32)] ring-1 ring-black/5 sm:rounded-[2rem]">
             <Image
               src="/photos/service-makeup.jpg"
               alt=""
               fill
               priority
-              sizes="(max-width: 1024px) 30vw, 260px"
+              sizes="(max-width: 1024px) 22vw, 200px"
               className="object-cover"
             />
           </div>
 
-          <div className="absolute -right-[2%] top-[6%] z-10 aspect-square w-[32vw] max-w-[280px] rotate-[3deg] overflow-hidden rounded-[1.5rem] shadow-[0_24px_60px_-20px_rgba(43,29,14,0.32)] ring-1 ring-black/5 sm:rounded-[2rem] lg:right-[2%]">
+          <div className="absolute right-0 top-[8%] z-10 aspect-square w-[24vw] max-w-[220px] rotate-[4deg] overflow-hidden rounded-[1.5rem] shadow-[0_24px_60px_-20px_rgba(43,29,14,0.32)] ring-1 ring-black/5 sm:rounded-[2rem]">
             <Image
               src="/photos/service-hair-balayage.jpg"
               alt=""
               fill
               priority
-              sizes="(max-width: 1024px) 32vw, 280px"
+              sizes="(max-width: 1024px) 24vw, 220px"
               className="object-cover"
             />
           </div>
 
-          <div className="absolute bottom-0 right-[10%] z-10 aspect-[3/4] w-[26vw] max-w-[220px] rotate-[2deg] overflow-hidden rounded-[1.5rem] shadow-[0_28px_64px_-20px_rgba(43,29,14,0.38)] ring-1 ring-black/5 sm:rounded-[2rem] lg:right-[14%]">
+          <div className="absolute bottom-[2%] right-[6%] z-10 aspect-[3/4] w-[20vw] max-w-[180px] rotate-[2deg] overflow-hidden rounded-[1.5rem] shadow-[0_28px_64px_-20px_rgba(43,29,14,0.38)] ring-1 ring-black/5 sm:rounded-[2rem]">
             <Image
               src="/photos/salon-hero.jpg"
               alt=""
               fill
               priority
-              sizes="(max-width: 1024px) 26vw, 220px"
+              sizes="(max-width: 1024px) 20vw, 180px"
               className="object-cover"
             />
           </div>
 
           <h1
-            className="pointer-events-none relative z-30 text-balance pt-8 text-center font-display font-light leading-[0.92] tracking-[-0.02em] text-ink sm:pt-12"
+            className="pointer-events-none relative z-30 mx-auto max-w-2xl text-balance pt-12 text-center font-display font-light leading-[0.95] tracking-[-0.02em] text-ink sm:pt-16"
             style={{
-              fontSize: 'clamp(2.5rem, 12vw, 9rem)',
+              fontSize: 'clamp(2.25rem, 8.5vw, 6.5rem)',
               fontVariationSettings: '"opsz" 144, "SOFT" 50'
             }}
           >

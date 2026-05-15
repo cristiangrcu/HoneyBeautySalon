@@ -2,14 +2,13 @@ import { useTranslations } from 'next-intl';
 import { Star, PencilLine } from 'lucide-react';
 import { googleReviews, siteConfig } from '@/config/site';
 import { SmartImage } from './SmartImage';
-import { AppleEmoji } from './AppleEmoji';
 
 const FLOATING_EMOJIS = [
-  { name: 'heart-eyes', fallback: '😍', size: 44, position: 'left-[5%] top-[14%]', anim: 'animate-float-slow', delay: '0s' },
-  { name: 'sparkles', fallback: '✨', size: 36, position: 'right-[7%] top-[10%]', anim: 'animate-float-med', delay: '0.8s' },
-  { name: 'heart', fallback: '❤️', size: 32, position: 'left-[10%] bottom-[12%]', anim: 'animate-float-med', delay: '1.4s' },
-  { name: 'thumbs-up', fallback: '👍', size: 44, position: 'right-[8%] bottom-[16%]', anim: 'animate-float-slow', delay: '0.4s' },
-  { name: 'glowing-star', fallback: '🌟', size: 28, position: 'left-[50%] top-[6%]', anim: 'animate-float-fast', delay: '1.2s' }
+  { emoji: '😍', position: 'left-[5%] top-[14%]', size: 'text-4xl sm:text-5xl', anim: 'animate-float-slow', delay: '0s' },
+  { emoji: '✨', position: 'right-[7%] top-[10%]', size: 'text-2xl sm:text-3xl', anim: 'animate-float-med', delay: '0.8s' },
+  { emoji: '❤️', position: 'left-[10%] bottom-[12%]', size: 'text-2xl sm:text-3xl', anim: 'animate-float-med', delay: '1.4s' },
+  { emoji: '👍', position: 'right-[8%] bottom-[16%]', size: 'text-3xl sm:text-4xl', anim: 'animate-float-slow', delay: '0.4s' },
+  { emoji: '🌟', position: 'left-1/2 top-[6%]', size: 'text-xl sm:text-2xl', anim: 'animate-float-fast', delay: '1.2s' }
 ];
 
 export function Testimonials() {
@@ -19,13 +18,13 @@ export function Testimonials() {
     <section id="testimonials" className="relative overflow-hidden bg-white py-20 sm:py-28">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         {FLOATING_EMOJIS.map((item, i) => (
-          <div
+          <span
             key={i}
-            className={`absolute opacity-80 ${item.position} ${item.anim}`}
+            className={`absolute select-none leading-none opacity-80 ${item.position} ${item.size} ${item.anim}`}
             style={{ animationDelay: item.delay }}
           >
-            <AppleEmoji name={item.name} fallback={item.fallback} size={item.size} />
-          </div>
+            {item.emoji}
+          </span>
         ))}
       </div>
 

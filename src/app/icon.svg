@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#2B1D0E"/>
-  <text x="32" y="42" text-anchor="middle" font-family="'Cormorant Garamond', 'Playfair Display', Georgia, serif" font-size="32" font-weight="300" letter-spacing="2" fill="#FAF5E9">H</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="18" fill="#FFFFFF"/>
+  <g fill="#5C3F2A">
+    <rect x="22" y="14" width="9" height="72"/>
+    <rect x="69" y="14" width="9" height="72"/>
+    <path d="M31 43 Q50 56 69 43 L69 52 Q50 65 31 52 Z"/>
+  </g>
 </svg>

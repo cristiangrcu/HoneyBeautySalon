@@ -50,49 +50,51 @@ export function Header() {
   const bookShort = bookText.split(' ')[0];
 
   return (
-    <header
-      className={`fixed top-0 z-40 w-full transition-all duration-300 ${
-        scrolled
-          ? 'bg-white/85 backdrop-blur-md shadow-[0_1px_0_rgba(107,78,50,0.08)]'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="container-honey relative flex items-center justify-between gap-3 py-3 sm:py-5">
-        <button
-          type="button"
-          onClick={() => setOpen(true)}
-          aria-label={t('menu')}
-          className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-ink/10 bg-white/70 text-ink backdrop-blur transition-colors hover:bg-cream-100 sm:h-11 sm:w-auto sm:gap-2 sm:px-4 sm:text-[11px] sm:font-medium sm:uppercase sm:tracking-[0.22em]"
-        >
-          <Menu size={16} strokeWidth={1.75} aria-hidden="true" />
-          <span className="hidden sm:inline">{t('menu')}</span>
-        </button>
+    <>
+      <header
+        className={`fixed top-0 z-40 w-full transition-all duration-300 ${
+          scrolled
+            ? 'bg-white/85 backdrop-blur-md shadow-[0_1px_0_rgba(107,78,50,0.08)]'
+            : 'bg-transparent'
+        }`}
+      >
+        <div className="container-honey relative flex items-center justify-between gap-3 py-3 sm:py-5">
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            aria-label={t('menu')}
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-ink/10 bg-white/70 text-ink backdrop-blur transition-colors hover:bg-cream-100 sm:h-11 sm:w-auto sm:gap-2 sm:px-4 sm:text-[11px] sm:font-medium sm:uppercase sm:tracking-[0.22em]"
+          >
+            <Menu size={16} strokeWidth={1.75} aria-hidden="true" />
+            <span className="hidden sm:inline">{t('menu')}</span>
+          </button>
 
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Logo size="sm" align="center" />
-        </div>
-
-        <div className="flex items-center justify-end gap-1.5 sm:gap-3">
-          <div className="hidden sm:block">
-            <LanguageSwitcher />
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <Logo size="sm" align="center" />
           </div>
-          <Link
-            href="/#contact"
-            className="hidden h-11 items-center rounded-full border border-ink/10 bg-white/70 px-4 text-[11px] font-medium uppercase tracking-[0.22em] text-ink backdrop-blur transition-colors hover:bg-cream-100 sm:inline-flex"
-          >
-            {t('contact')}
-          </Link>
-          <a
-            href={siteConfig.altegio.bookingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-gold h-10 shrink-0 !gap-0 !px-3.5 !py-0 !text-[10px] !tracking-[0.14em] sm:h-11 sm:!px-5 sm:!text-[11px] sm:!tracking-[0.22em]"
-          >
-            <span className="sm:hidden">{bookShort}</span>
-            <span className="hidden sm:inline">{bookText}</span>
-          </a>
+
+          <div className="flex items-center justify-end gap-1.5 sm:gap-3">
+            <div className="hidden sm:block">
+              <LanguageSwitcher />
+            </div>
+            <Link
+              href="/#contact"
+              className="hidden h-11 items-center rounded-full border border-ink/10 bg-white/70 px-4 text-[11px] font-medium uppercase tracking-[0.22em] text-ink backdrop-blur transition-colors hover:bg-cream-100 sm:inline-flex"
+            >
+              {t('contact')}
+            </Link>
+            <a
+              href={siteConfig.altegio.bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-gold h-10 shrink-0 !gap-0 !px-3.5 !py-0 !text-[10px] !tracking-[0.14em] sm:h-11 sm:!px-5 sm:!text-[11px] sm:!tracking-[0.22em]"
+            >
+              <span className="sm:hidden">{bookShort}</span>
+              <span className="hidden sm:inline">{bookText}</span>
+            </a>
+          </div>
         </div>
-      </div>
+      </header>
 
       {open && (
         <div
@@ -161,6 +163,6 @@ export function Header() {
           </nav>
         </div>
       )}
-    </header>
+    </>
   );
 }

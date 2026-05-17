@@ -79,7 +79,7 @@ export function Header() {
             </div>
             <Link
               href="/#contact"
-              className="hidden h-11 items-center rounded-full border border-ink/10 bg-white/70 px-4 text-[11px] font-medium uppercase tracking-[0.22em] text-ink backdrop-blur transition-colors hover:bg-cream-100 sm:inline-flex"
+              className="hidden h-11 items-center rounded-full border border-ink/10 bg-white/70 px-4 text-[11px] font-medium uppercase tracking-[0.22em] text-ink backdrop-blur transition-colors hover:bg-cream-100 lg:inline-flex"
             >
               {t('contact')}
             </Link>

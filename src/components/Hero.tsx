@@ -35,12 +35,12 @@ export function Hero() {
           </div>
         </div>
 
-        {/* MOBILE LAYOUT: headline first, images in compact row below */}
-        <div className="block sm:hidden">
+        {/* MOBILE + TABLET PORTRAIT LAYOUT: headline first, images in compact row below */}
+        <div className="block lg:hidden">
           <h1
             className="mt-6 text-balance text-center font-display font-light leading-[1] tracking-[-0.02em] text-ink animate-fade-up"
             style={{
-              fontSize: 'clamp(2.1rem, 9.5vw, 3.25rem)',
+              fontSize: 'clamp(2.1rem, 8vw, 4.5rem)',
               fontVariationSettings: '"opsz" 144, "SOFT" 50',
               animationDelay: '0.15s'
             }}
@@ -107,7 +107,7 @@ export function Hero() {
         </div>
 
         {/* DESKTOP LAYOUT: spread images with text in front */}
-        <div className="relative mx-auto mt-14 hidden min-h-[600px] max-w-7xl sm:block lg:min-h-[680px]">
+        <div className="relative mx-auto mt-14 hidden min-h-[600px] max-w-7xl lg:block lg:min-h-[680px]">
           <div
             className="absolute left-0 top-[18%] z-10 w-[26vw] max-w-[240px] animate-float-gentle"
             style={{ animationDelay: '0s' }}

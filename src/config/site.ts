@@ -254,12 +254,16 @@ export const courses: Course[] = [
 export const galleryImages = [
   '/photos/service-brows.jpg',
   '/photos/service-hair-balayage.jpg',
+  '/photos/service-nails-1.jpg',
   '/photos/service-makeup-2.jpg',
   '/photos/service-barber.jpg',
+  '/photos/service-nails-2.jpg',
   '/photos/service-makeup-3.jpg',
   '/photos/service-hair-2.jpg',
+  '/photos/service-nails-3.jpg',
   '/photos/service-barber-beard.jpg',
-  '/photos/service-hair-3.jpg'
+  '/photos/service-hair-3.jpg',
+  '/photos/service-nails-4.jpg'
 ];
 
 export interface GoogleReview {

@@ -113,32 +113,6 @@
           "menSpa": "SPA RITUALS men's pedicure"
         }
       },
-      "podologie": {
-        "title": "Podology",
-        "description": "Medical foot care: onychomycosis, ingrown nails, calluses, hematomas.",
-        "subItems": {
-          "consultation": "Consultation without procedure",
-          "medicalPedicure": "Medical pedicure",
-          "solesTreatment": "Soles treatment (no toes)",
-          "onicomicoza1": "Onychomycosis — one nail",
-          "onicomicoza2": "Onychomycosis — two nails",
-          "onicomicozaAll": "Onychomycosis — all nails",
-          "correctionSystem": "Corrective system application",
-          "repeatVisit": "Follow-up visit",
-          "onicogrifoza1": "Onychogryphosis — one nail",
-          "onicogrifozaMulti": "Onychogryphosis — two or more",
-          "callusRemoval12": "Plantar calluses — 1-2 spots",
-          "callusRemoval35": "Plantar calluses — 3-5 spots",
-          "subungualHematoma": "Subungual hematoma (1 nail)",
-          "onicoliza1": "Onycholysis — one nail",
-          "onicoliza2": "Onycholysis — two nails",
-          "onicolizaAll": "Onycholysis — all nails",
-          "ingrownStI": "Ingrown nail — Stage I (mild pain)",
-          "ingrownStII": "Ingrown nail — Stage II (acute pain)",
-          "ingrownStIII": "Ingrown nail — Stage III (inflammation, granulation)",
-          "bandage": "Post-procedure dressing"
-        }
-      },
       "hair": {
         "title": "Hair (Women)",
         "description": "Cuts, styling, colouring (Balayage, AirTouch), toning and updos for every length.",

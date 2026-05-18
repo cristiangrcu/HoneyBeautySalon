@@ -60,7 +60,6 @@ export type ServiceKey =
   | 'brows'
   | 'manicure'
   | 'pedicure'
-  | 'podologie'
   | 'hair'
   | 'hairTreatments'
   | 'barber'
@@ -108,8 +107,7 @@ export const services: ServiceItem[] = [
     priceFrom: 250,
     currency: 'MDL',
     duration: '30–60 min',
-    image:
-      'https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=1200&q=80',
+    image: '/photos/service-brows.jpg',
     subServices: [
       { key: 'styling', priceFrom: 250 },
       { key: 'tintStyle', priceFrom: 400 },
@@ -149,36 +147,6 @@ export const services: ServiceItem[] = [
       { key: 'spaGel', priceFrom: 1000 },
       { key: 'menHygienic', priceFrom: 500, duration: '60 min' },
       { key: 'menSpa', priceFrom: 800 }
-    ]
-  },
-  {
-    key: 'podologie',
-    priceFrom: 200,
-    currency: 'MDL',
-    duration: 'varies',
-    image:
-      'https://images.unsplash.com/photo-1519415943484-9fa1873496d4?auto=format&fit=crop&w=1200&q=80',
-    subServices: [
-      { key: 'consultation', priceFrom: 200 },
-      { key: 'medicalPedicure', priceFrom: 700, priceTo: 1000 },
-      { key: 'solesTreatment', priceFrom: 600 },
-      { key: 'onicomicoza1', priceFrom: 350 },
-      { key: 'onicomicoza2', priceFrom: 500 },
-      { key: 'onicomicozaAll', priceFrom: 700 },
-      { key: 'correctionSystem', priceFrom: 1000 },
-      { key: 'repeatVisit', priceFrom: 800 },
-      { key: 'onicogrifoza1', priceFrom: 200 },
-      { key: 'onicogrifozaMulti', priceFrom: 400 },
-      { key: 'callusRemoval12', priceFrom: 250, priceTo: 350 },
-      { key: 'callusRemoval35', priceFrom: 350, priceTo: 500 },
-      { key: 'subungualHematoma', priceFrom: 300 },
-      { key: 'onicoliza1', priceFrom: 200 },
-      { key: 'onicoliza2', priceFrom: 300 },
-      { key: 'onicolizaAll', priceFrom: 500 },
-      { key: 'ingrownStI', priceFrom: 400 },
-      { key: 'ingrownStII', priceFrom: 500 },
-      { key: 'ingrownStIII', priceFrom: 700 },
-      { key: 'bandage', priceFrom: 200 }
     ]
   },
   {
@@ -229,7 +197,7 @@ export const services: ServiceItem[] = [
     priceFrom: 150,
     currency: 'MDL',
     duration: '30–60 min',
-    image: '/photos/service-barber-honey.jpg',
+    image: '/photos/service-barber.jpg',
     subServices: [
       { key: 'kidsCut', priceFrom: 400 },
       { key: 'menCut', priceFrom: 400, priceTo: 500 },
@@ -282,16 +250,16 @@ export const courses: Course[] = [
   }
 ];
 
-/** Gallery — curated mix of real salon, services and renders. */
+/** Gallery — only real work shots. */
 export const galleryImages = [
-  '/photos/salon-interior-3.jpg',
-  '/photos/service-hair.jpg',
+  '/photos/service-brows.jpg',
+  '/photos/service-hair-balayage.jpg',
   '/photos/service-makeup-2.jpg',
-  '/photos/render-logo-lounge.jpg',
-  '/photos/service-barber-beard.jpg',
+  '/photos/service-barber.jpg',
   '/photos/service-makeup-3.jpg',
-  '/photos/render-hair-stations.jpg',
-  '/photos/salon-brochure.jpg'
+  '/photos/service-hair-2.jpg',
+  '/photos/service-barber-beard.jpg',
+  '/photos/service-hair-3.jpg'
 ];
 
 export interface GoogleReview {

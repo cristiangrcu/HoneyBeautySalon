@@ -1,10 +1,6 @@
+import Image from 'next/image';
 import { Link } from '@/i18n/routing';
 
-/**
- * Typographic logo matching the uploaded Honey Beauty Salon brand.
- * If you'd rather use the image version, drop /public/logo.svg or
- * /public/logo.png and replace the inner span with a <Image /> tag.
- */
 export function Logo({
   inverted = false,
   size = 'sm',
@@ -14,36 +10,27 @@ export function Logo({
   size?: 'sm' | 'lg';
   align?: 'start' | 'center';
 }) {
-  const titleSize =
-    size === 'lg'
-      ? 'text-4xl sm:text-5xl tracking-[0.32em]'
-      : 'text-base tracking-[0.2em] sm:text-2xl sm:tracking-[0.28em]';
-  const subSize =
-    size === 'lg'
-      ? 'text-[11px] tracking-[0.5em]'
-      : 'text-[6px] tracking-[0.3em] sm:text-[8px] sm:tracking-[0.42em]';
+  const heightClass =
+    size === 'lg' ? 'h-12 sm:h-16' : 'h-8 sm:h-10';
   const alignClass = align === 'center' ? 'items-center' : 'items-start';
 
   return (
     <Link
       href="/"
       aria-label="Honey Beauty Salon"
-      className={`group inline-flex flex-col leading-none ${alignClass}`}
+      className={`group inline-flex leading-none ${alignClass}`}
     >
-      <span
-        className={`font-display font-light uppercase ${titleSize} transition-colors ${
-          inverted ? 'text-cream-50' : 'text-ink'
-        } group-hover:text-honey-700`}
-      >
-        Honey
-      </span>
-      <span
-        className={`mt-1 font-sans font-light uppercase ${subSize} ${
-          inverted ? 'text-cream-200/90' : 'text-ink-soft'
+      <Image
+        src="/logo.png"
+        alt="Honey Beauty Salon"
+        width={1600}
+        height={440}
+        priority
+        sizes="(max-width: 640px) 128px, 200px"
+        className={`w-auto object-contain transition-opacity duration-200 group-hover:opacity-80 ${heightClass} ${
+          inverted ? '[filter:brightness(0)_invert(1)]' : ''
         }`}
-      >
-        Beauty Salon
-      </span>
+      />
     </Link>
   );
 }
